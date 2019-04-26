@@ -12,6 +12,12 @@
 		160611742260B29F003CE493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160611722260B29F003CE493 /* Main.storyboard */; };
 		160611762260B2A0003CE493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160611752260B2A0003CE493 /* Assets.xcassets */; };
 		160611792260B2A0003CE493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160611772260B2A0003CE493 /* LaunchScreen.storyboard */; };
+		16D2ED4B2271D34D00C4D131 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED4A2271D34D00C4D131 /* SettingViewController.swift */; };
+		16D2ED4D2271DDC000C4D131 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED4C2271DDC000C4D131 /* ProfileViewController.swift */; };
+		16D2ED4F2271E04300C4D131 /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED4E2271E04300C4D131 /* RemainderViewController.swift */; };
+		16D2ED512271E78100C4D131 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED502271E78100C4D131 /* SetGoalViewController.swift */; };
+		16D2ED532271E90800C4D131 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED522271E90800C4D131 /* FAQViewController.swift */; };
+		16D2ED552271E9AD00C4D131 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED542271E9AD00C4D131 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		160611752260B2A0003CE493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160611782260B2A0003CE493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1606117A2260B2A0003CE493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D2ED4A2271D34D00C4D131 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		16D2ED4C2271DDC000C4D131 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		16D2ED4E2271E04300C4D131 /* RemainderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
+		16D2ED502271E78100C4D131 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
+		16D2ED522271E90800C4D131 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		16D2ED542271E9AD00C4D131 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				160611752260B2A0003CE493 /* Assets.xcassets */,
 				160611772260B2A0003CE493 /* LaunchScreen.storyboard */,
 				1606117A2260B2A0003CE493 /* Info.plist */,
+				16D2ED4A2271D34D00C4D131 /* SettingViewController.swift */,
+				16D2ED4C2271DDC000C4D131 /* ProfileViewController.swift */,
+				16D2ED4E2271E04300C4D131 /* RemainderViewController.swift */,
+				16D2ED502271E78100C4D131 /* SetGoalViewController.swift */,
+				16D2ED522271E90800C4D131 /* FAQViewController.swift */,
+				16D2ED542271E9AD00C4D131 /* AboutUsViewController.swift */,
 			);
 			path = "TabBar Custom";
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D2ED552271E9AD00C4D131 /* AboutUsViewController.swift in Sources */,
 				160611712260B29F003CE493 /* ViewController.swift in Sources */,
+				16D2ED4F2271E04300C4D131 /* RemainderViewController.swift in Sources */,
 				1606116F2260B29F003CE493 /* AppDelegate.swift in Sources */,
+				16D2ED4D2271DDC000C4D131 /* ProfileViewController.swift in Sources */,
+				16D2ED532271E90800C4D131 /* FAQViewController.swift in Sources */,
+				16D2ED512271E78100C4D131 /* SetGoalViewController.swift in Sources */,
+				16D2ED4B2271D34D00C4D131 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
