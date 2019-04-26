@@ -10,7 +10,7 @@ import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let settingList: [String] = ["Profile", "FAQ", "About Us"]
+    let settingList: [String] = ["Profile", "Set Goal", "FAQ", "About Us"]
     
     @IBOutlet weak var tableViewSettings: UITableView!
     let cellReuseIdentifier = "settingCell"
@@ -46,25 +46,14 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             if tag == 0 {
                 performSegue(withIdentifier: "profileSegue", sender: self)
             } else if tag == 1 {
-                performSegue(withIdentifier: "faqSegue", sender: self)
+                performSegue(withIdentifier: "setLimitUsageSegue", sender: self)
             } else if tag == 2 {
+                performSegue(withIdentifier: "faqSegue", sender: self)
+            } else if tag == 3 {
                 performSegue(withIdentifier: "aboutUsSegue", sender: self)
             }
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

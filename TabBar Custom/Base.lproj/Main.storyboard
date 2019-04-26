@@ -120,6 +120,7 @@
                         <segue destination="718-qb-tJh" kind="show" identifier="profileSegue" id="YCx-5a-y5B"/>
                         <segue destination="Oiw-u7-JwN" kind="show" identifier="faqSegue" id="9iM-Up-603"/>
                         <segue destination="Ab7-LE-7IC" kind="show" identifier="aboutUsSegue" id="grK-Y9-cya"/>
+                        <segue destination="Buz-qu-HB1" kind="show" identifier="setLimitUsageSegue" id="QOm-fp-FfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rg2-uA-oSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +206,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qct-lo-L6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="1694"/>
+            <point key="canvasLocation" x="662" y="1694"/>
+        </scene>
+        <!--Set Goal-->
+        <scene sceneID="dm1-0Z-iKv">
+            <objects>
+                <viewController title="Set Goal" id="Buz-qu-HB1" customClass="SetLimitViewController" customModule="TabBar_Custom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F6T-3C-3Ee">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Limit Goal Daily Usage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zf-La-9SM">
+                                <rect key="frame" x="68" y="139" width="279" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Not-bt-kqf">
+                                <rect key="frame" x="147" y="191.5" width="120" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plastic/day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acf-Jr-AcD">
+                                <rect key="frame" x="272" y="268" width="85" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JaD-81-DQ0">
+                                <rect key="frame" x="160" y="316" width="94" height="29"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="setLimitStepper:" destination="Buz-qu-HB1" eventType="valueChanged" id="bQt-k8-jVl"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="acf-Jr-AcD" firstAttribute="top" secondItem="6Zf-La-9SM" secondAttribute="bottom" constant="102.5" id="1Lf-IW-Olv"/>
+                            <constraint firstItem="h0w-b4-mr4" firstAttribute="trailing" secondItem="JaD-81-DQ0" secondAttribute="trailing" constant="160" id="1Rp-il-opf"/>
+                            <constraint firstItem="6Zf-La-9SM" firstAttribute="top" secondItem="h0w-b4-mr4" secondAttribute="top" constant="51" id="3Kv-bq-S9Y"/>
+                            <constraint firstItem="Not-bt-kqf" firstAttribute="top" secondItem="6Zf-La-9SM" secondAttribute="bottom" constant="26" id="F8Y-e7-Nro"/>
+                            <constraint firstItem="h0w-b4-mr4" firstAttribute="trailing" secondItem="Not-bt-kqf" secondAttribute="trailing" constant="147" id="QnG-6j-JvI"/>
+                            <constraint firstItem="h0w-b4-mr4" firstAttribute="trailing" secondItem="acf-Jr-AcD" secondAttribute="trailing" constant="57" id="Sju-uo-jcH"/>
+                            <constraint firstItem="h0w-b4-mr4" firstAttribute="bottom" secondItem="JaD-81-DQ0" secondAttribute="bottom" constant="468" id="WSa-Hp-WvN"/>
+                            <constraint firstItem="Not-bt-kqf" firstAttribute="top" secondItem="6Zf-La-9SM" secondAttribute="bottom" constant="26" id="acn-62-xfW"/>
+                            <constraint firstItem="Not-bt-kqf" firstAttribute="leading" secondItem="h0w-b4-mr4" secondAttribute="leading" constant="147" id="bzM-Os-Jxi"/>
+                            <constraint firstItem="6Zf-La-9SM" firstAttribute="leading" secondItem="h0w-b4-mr4" secondAttribute="leading" constant="68" id="jIy-uX-osu"/>
+                            <constraint firstItem="h0w-b4-mr4" firstAttribute="trailing" secondItem="6Zf-La-9SM" secondAttribute="trailing" constant="67" id="oO7-VN-RiE"/>
+                            <constraint firstItem="acf-Jr-AcD" firstAttribute="leading" secondItem="h0w-b4-mr4" secondAttribute="leading" constant="272" id="pKN-Tb-rgE"/>
+                            <constraint firstItem="JaD-81-DQ0" firstAttribute="top" secondItem="Not-bt-kqf" secondAttribute="bottom" constant="44.5" id="pXh-HG-g3h"/>
+                            <constraint firstItem="JaD-81-DQ0" firstAttribute="top" secondItem="Not-bt-kqf" secondAttribute="bottom" constant="44.5" id="rCh-rs-RMK"/>
+                            <constraint firstItem="JaD-81-DQ0" firstAttribute="leading" secondItem="h0w-b4-mr4" secondAttribute="leading" constant="160" id="ua2-ko-wkg"/>
+                            <constraint firstItem="h0w-b4-mr4" firstAttribute="bottom" secondItem="acf-Jr-AcD" secondAttribute="bottom" constant="528" id="w5q-9k-mHC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h0w-b4-mr4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set Goal" id="MKj-I4-7SY"/>
+                    <connections>
+                        <outlet property="limitValueLabel" destination="Not-bt-kqf" id="QzR-oy-gO9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cX6-zI-VXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327.536231884058" y="1693.5267857142856"/>
         </scene>
         <!--FAQ-->
         <scene sceneID="KAB-A4-p3d">
@@ -220,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2q-8X-NuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="1694"/>
+            <point key="canvasLocation" x="2006" y="1694"/>
         </scene>
         <!--About Us-->
         <scene sceneID="Q4u-FT-C6w">
@@ -235,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEf-gc-Ib0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2155" y="1694"/>
+            <point key="canvasLocation" x="2796" y="1694"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="qT9-A0-deG">
