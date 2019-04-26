@@ -48,7 +48,6 @@ class HomeViewController: UIViewController {
         
 //        if Int(usageLabel.text!)! > limit {
 //            notifikasiAlmostLimit()
-//            print(<#T##items: Any...##Any#>)
 //        }
 //        } else if noPlastic == false{
 //            notifikasiNoPlastic()

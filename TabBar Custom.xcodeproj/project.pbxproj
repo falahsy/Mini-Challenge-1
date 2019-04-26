@@ -18,6 +18,8 @@
 		16D2ED532271E90800C4D131 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED522271E90800C4D131 /* FAQViewController.swift */; };
 		16D2ED552271E9AD00C4D131 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED542271E9AD00C4D131 /* AboutUsViewController.swift */; };
 		16DB03392272E90A003EEDE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB03382272E90A003EEDE3 /* HomeViewController.swift */; };
+		16DB033B22734139003EEDE3 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB033A22734139003EEDE3 /* NewsViewController.swift */; };
+		16DB033D22734464003EEDE3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB033C22734464003EEDE3 /* NewsTableViewCell.swift */; };
 		E9976337F1A77419BF6C79E9 /* Pods_TabBar_Custom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CB664CAF63C229AC4C21DD /* Pods_TabBar_Custom.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		16D2ED522271E90800C4D131 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		16D2ED542271E9AD00C4D131 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		16DB03382272E90A003EEDE3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		16DB033A22734139003EEDE3 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		16DB033C22734464003EEDE3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				16D2ED522271E90800C4D131 /* FAQViewController.swift */,
 				16D2ED542271E9AD00C4D131 /* AboutUsViewController.swift */,
 				16DB03382272E90A003EEDE3 /* HomeViewController.swift */,
+				16DB033A22734139003EEDE3 /* NewsViewController.swift */,
+				16DB033C22734464003EEDE3 /* NewsTableViewCell.swift */,
 			);
 			path = "TabBar Custom";
 			sourceTree = "<group>";
@@ -95,7 +101,6 @@
 				0CE427133AC3D7080945F281 /* Pods-TabBar Custom.debug.xcconfig */,
 				0F4A8720A1BFE2E9AEAD253A /* Pods-TabBar Custom.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -235,10 +240,12 @@
 			files = (
 				16D2ED552271E9AD00C4D131 /* AboutUsViewController.swift in Sources */,
 				160611712260B29F003CE493 /* ViewController.swift in Sources */,
+				16DB033D22734464003EEDE3 /* NewsTableViewCell.swift in Sources */,
 				16D2ED4F2271E04300C4D131 /* RemainderViewController.swift in Sources */,
 				16DB03392272E90A003EEDE3 /* HomeViewController.swift in Sources */,
 				1606116F2260B29F003CE493 /* AppDelegate.swift in Sources */,
 				16D2ED4D2271DDC000C4D131 /* ProfileViewController.swift in Sources */,
+				16DB033B22734139003EEDE3 /* NewsViewController.swift in Sources */,
 				16D2ED532271E90800C4D131 /* FAQViewController.swift in Sources */,
 				16D2ED4B2271D34D00C4D131 /* SettingViewController.swift in Sources */,
 			);
