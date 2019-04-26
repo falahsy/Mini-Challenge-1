@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import UserNotifications
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var usageLabel: UILabel!
     @IBOutlet weak var limitLabel: UILabel!
+    
     @IBOutlet weak var plasticBottleValue: UILabel!
     @IBOutlet weak var plasticCupValue: UILabel!
     @IBOutlet weak var plasticBagValue: UILabel!
@@ -20,9 +22,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var strawValue: UILabel!
     @IBOutlet weak var cigaretteButtValue: UILabel!
     
+    // Variable to store value plastics usage
     var usageValue = Int()
     var limitValue = Int()
-    
     var plasticBottleValueContainer = Int()
     var plasticCupValueContainer = Int()
     var plasticBagValueContainer = Int()
@@ -31,12 +33,46 @@ class HomeViewController: UIViewController {
     var strawValueContainer = Int()
     var cigaretteButtValueContainer = Int()
     
+    let content = UNMutableNotificationContent()
+    let formatter = DateFormatter()
+    var dateComponents = DateComponents()
+    
+    // HArcode untuk test Notification
+    let limit = 5
+    let usage = 7
+    let usageLimit = 11
+    let noPlastic = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        if Int(usageLabel.text!)! > limit {
+//            notifikasiAlmostLimit()
+//            print(<#T##items: Any...##Any#>)
+//        }
+//        } else if noPlastic == false{
+//            notifikasiNoPlastic()
+//        } else if usageLimit < limit{
+//            notifikasiOverLimit()
+//        }
+        
+    }
+    
+    func storeValueUserDefaults(){
+        UserDefaults.standard.set(self.usageValue, forKey: "usageKey")
+        UserDefaults.standard.set(self.limitValue, forKey: "limitKey")
+        UserDefaults.standard.set(self.plasticBottleValueContainer, forKey: "plasticBottleKey")
+        UserDefaults.standard.set(self.plasticCupValueContainer, forKey: "plasticCupKey")
+        UserDefaults.standard.set(self.plasticBagValueContainer, forKey: "plasticBagKey")
+        UserDefaults.standard.set(self.foodPackagingValueContainer, forKey: "foodPackagingKey")
+        UserDefaults.standard.set(self.plasticSpoonValueContainer, forKey: "plasticSpoonKey")
+        UserDefaults.standard.set(self.strawValueContainer, forKey: "strawKey")
+        UserDefaults.standard.set(self.cigaretteButtValueContainer, forKey: "cigaretteButtKey")
     }
     
     func calculateUsage()-> Int {
+        storeValueUserDefaults()
+        
         return plasticBottleValueContainer + plasticCupValueContainer + plasticBagValueContainer + foodPackagingValueContainer + plasticSpoonValueContainer + strawValueContainer + cigaretteButtValueContainer
     }
     
@@ -89,6 +125,43 @@ class HomeViewController: UIViewController {
         usageLabel.text = String(usageValue)
     }
     
+
+    // -- Notification Function Start --
+    func notifikasiAlmostLimit(){
+        content.title = "Congratulations!🎉"
+        content.body = "Cie congrats!"
+        content.sound = UNNotificationSound.default
+        let date = Date(timeIntervalSinceNow: 3)
+        //        dateComponents.hour = 16
+        //        dateComponents.minute = 36
+        //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
+        let trigger1 = UNCalendarNotificationTrigger(dateMatching: trigger, repeats: true)
+        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger1)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
+    func notifikasiNoPlastic(){
+        content.title = "You're the best!😎"
+        content.body = "Cie congrats!"
+        content.sound = UNNotificationSound.default
+        
+        dateComponents.hour = 16
+        dateComponents.minute = 35
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
+    func notifikasiOverLimit(){
+        content.title = "You can do better than this☹️"
+        content.body = "cupu u"
+        content.sound = UNNotificationSound.default
+        
+        dateComponents.hour = 16
+        dateComponents.minute = 37
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
 }
