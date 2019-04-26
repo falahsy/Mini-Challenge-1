@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SetLimitViewController: UIViewController {
 
     @IBOutlet weak var limitValueLabel: UILabel!
+    var limitGoal: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +25,18 @@ class SetLimitViewController: UIViewController {
         limitValueLabel.text = String(limitSetValue)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
 
+    @IBAction func doneButton(_ sender: Any) {
+        
+        if let limitTemp = limitValueLabel.text {
+            self.limitGoal = Int(limitTemp)!
+        }
+        
+        SCLAlertView().showSuccess("Congratulation!", subTitle: "Goal has been set")
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
