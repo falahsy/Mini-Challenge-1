@@ -58,21 +58,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    func storeValueUserDefaults(){
-        UserDefaults.standard.set(self.usageValue, forKey: "usageKey")
-        UserDefaults.standard.set(self.limitValue, forKey: "limitKey")
-        UserDefaults.standard.set(self.plasticBottleValueContainer, forKey: "plasticBottleKey")
-        UserDefaults.standard.set(self.plasticCupValueContainer, forKey: "plasticCupKey")
-        UserDefaults.standard.set(self.plasticBagValueContainer, forKey: "plasticBagKey")
-        UserDefaults.standard.set(self.foodPackagingValueContainer, forKey: "foodPackagingKey")
-        UserDefaults.standard.set(self.plasticSpoonValueContainer, forKey: "plasticSpoonKey")
-        UserDefaults.standard.set(self.strawValueContainer, forKey: "strawKey")
-        UserDefaults.standard.set(self.cigaretteButtValueContainer, forKey: "cigaretteButtKey")
-    }
-    
     func calculateUsage()-> Int {
-        storeValueUserDefaults()
-        
         return plasticBottleValueContainer + plasticCupValueContainer + plasticBagValueContainer + foodPackagingValueContainer + plasticSpoonValueContainer + strawValueContainer + cigaretteButtValueContainer
     }
     
