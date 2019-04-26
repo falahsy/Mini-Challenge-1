@@ -10,7 +10,7 @@ import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let settingList: [String] = ["Profile", "Reminder", "Set Goals", "FAQ", "About Us"]
+    let settingList: [String] = ["Profile", "FAQ", "About Us"]
     
     @IBOutlet weak var tableViewSettings: UITableView!
     let cellReuseIdentifier = "settingCell"
@@ -46,12 +46,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             if tag == 0 {
                 performSegue(withIdentifier: "profileSegue", sender: self)
             } else if tag == 1 {
-                performSegue(withIdentifier: "reminderSegue", sender: self)
-            } else if tag == 2 {
-                performSegue(withIdentifier: "setGoalSegue", sender: self)
-            } else if tag == 3 {
                 performSegue(withIdentifier: "faqSegue", sender: self)
-            } else if tag == 4 {
+            } else if tag == 2 {
                 performSegue(withIdentifier: "aboutUsSegue", sender: self)
             }
         }
