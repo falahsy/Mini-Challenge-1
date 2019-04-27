@@ -10,13 +10,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var firstNameTextInput: UITextField!
     @IBOutlet weak var middleNameTextInput: UITextField!
     @IBOutlet weak var lastNameTextInput: UITextField!
     var firstName: String = ""
     var middleName: String = ""
     var lastName: String = ""
+    
+    var isValidName: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +27,16 @@ class ProfileViewController: UIViewController {
         lastNameTextInput.text = ""
 
         // Do any additional setup after loading the view.
-        submitButton.layer.cornerRadius = 10
-        submitButton.clipsToBounds = true
         
     }
     
-
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doneButton(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -41,9 +46,4 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func submitButtonName(_ sender: UIButton) {
-        firstName = firstNameTextInput.text!
-        middleName = middleNameTextInput.text!
-        lastName = lastNameTextInput.text!
-    }
 }
