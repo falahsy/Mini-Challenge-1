@@ -11,6 +11,7 @@ import UserNotifications
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var greetingNameLabel: UILabel!
     @IBOutlet weak var usageLabel: UILabel!
     @IBOutlet weak var limitLabel: UILabel!
     
@@ -43,6 +44,9 @@ class HomeViewController: UIViewController {
     let usageLimit = 11
     let noPlastic = true
     
+    var nickName = "Spongebob!"
+    var user = Person()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,58 +58,70 @@ class HomeViewController: UIViewController {
 //        } else if usageLimit < limit{
 //            notifikasiOverLimit()
 //        }
+        user.nickName = self.nickName
         
+        greetingNameLabel.text = "Hello,\n\(user.nickName)"
     }
     
     func calculateUsage()-> Int {
-        return plasticBottleValueContainer + plasticCupValueContainer + plasticBagValueContainer + foodPackagingValueContainer + plasticSpoonValueContainer + strawValueContainer + cigaretteButtValueContainer
+        var total = 0
+        for item in user.plasticUsage {
+            total += item
+        }
+        return total
     }
     
     @IBAction func plasticBottleStepper(_ sender: UIStepper) {
-        plasticBottleValueContainer = Int(sender.value)
-        plasticBottleValue.text = String(plasticBottleValueContainer)
+        user.plasticUsage[0] = Int(sender.value)
+        plasticBottleValue.text = String(user.plasticUsage[0])
+        
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
     
     @IBAction func plasticCupStepper(_ sender: UIStepper) {
-        plasticCupValueContainer = Int(sender.value)
-        plasticCupValue.text = String(plasticCupValueContainer)
+        user.plasticUsage[1] = Int(sender.value)
+        plasticCupValue.text = String(user.plasticUsage[1])
+        
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
     
     @IBAction func plasticBagStepper(_ sender: UIStepper) {
-        plasticBagValueContainer = Int(sender.value)
-        plasticBagValue.text = String(plasticBagValueContainer)
+        user.plasticUsage[2] = Int(sender.value)
+        plasticBagValue.text = String(user.plasticUsage[2])
+        
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
     
     @IBAction func foodPackagingStepper(_ sender: UIStepper) {
-        foodPackagingValueContainer = Int(sender.value)
-        foodPackagingValue.text = String(foodPackagingValueContainer)
+        user.plasticUsage[3] = Int(sender.value)
+        foodPackagingValue.text = String(user.plasticUsage[3])
+        
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
     
     @IBAction func plasticSpoonStepper(_ sender: UIStepper) {
-        plasticSpoonValueContainer = Int(sender.value)
-        plasticSpoonValue.text = String(plasticSpoonValueContainer)
+        user.plasticUsage[4] = Int(sender.value)
+        plasticSpoonValue.text = String(user.plasticUsage[4])
+        
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
     
     @IBAction func strawStepper(_ sender: UIStepper) {
-        strawValueContainer = Int(sender.value)
-        strawValue.text = String(strawValueContainer)
+        user.plasticUsage[5] = Int(sender.value)
+        strawValue.text = String(user.plasticUsage[5])
+        
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
     
     @IBAction func cigaretteButtStepper(_ sender: UIStepper) {
-        cigaretteButtValueContainer = Int(sender.value)
-        cigaretteButtValue.text = String(cigaretteButtValueContainer)
+        user.plasticUsage[6] = Int(sender.value)
+        cigaretteButtValue.text = String(user.plasticUsage[6])
         usageValue = calculateUsage()
         usageLabel.text = String(usageValue)
     }
