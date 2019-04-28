@@ -11,7 +11,6 @@ import RealmSwift
 
 class Person: Object {
     @objc dynamic var nickName: String = "Mr/s. Plastic Warrior"
-    @objc dynamic var limitTargetUsagePlasticInADay: Int = 0
     
     @objc dynamic var bottleUsage: Int = 0
     @objc dynamic var cupUsage: Int = 0

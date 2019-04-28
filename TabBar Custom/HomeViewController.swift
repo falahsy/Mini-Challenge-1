@@ -25,16 +25,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var strawValue: UILabel!
     @IBOutlet weak var cigaretteButtValue: UILabel!
     
-    // Variable to store value plastics usage
-    var usageValue = Int()
-    var limitValue = Int()
-    var plasticBottleValueContainer = Int()
-    var plasticCupValueContainer = Int()
-    var plasticBagValueContainer = Int()
-    var foodPackagingValueContainer = Int()
-    var plasticSpoonValueContainer = Int()
-    var strawValueContainer = Int()
-    var cigaretteButtValueContainer = Int()
+    @IBOutlet weak var bottleStepper: UIStepper!
+    @IBOutlet weak var cupStepper: UIStepper!
+    @IBOutlet weak var bagStepper: UIStepper!
+    @IBOutlet weak var foodPackagingStepper: UIStepper!
+    @IBOutlet weak var spoonStepper: UIStepper!
+    @IBOutlet weak var strawStepper: UIStepper!
+    @IBOutlet weak var cigaretteStepper: UIStepper!
     
     let content = UNMutableNotificationContent()
     let formatter = DateFormatter()
@@ -61,10 +58,7 @@ class HomeViewController: UIViewController {
 //            notifikasiOverLimit()
 //        }
         
-        
-        
         print(Realm.Configuration.defaultConfiguration.fileURL)
-
         
 //        try! database.write {
 //            database.deleteAll()
@@ -80,7 +74,6 @@ class HomeViewController: UIViewController {
                         self.database.add(self.user)
                         self.user.nickName = nickNameTextField.text!
                         self.user.limitUsageGoal = Int(limitUsageTextField.text!)!
-                        
                         self.greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
                         self.limitLabel.text = String(self.user.limitUsageGoal)
                     }
@@ -89,18 +82,12 @@ class HomeViewController: UIViewController {
             alert.showEdit("Alert", subTitle: "Set Your Nickname and Limit Plastic Usage per Day")
         } else {
             user = database.objects(Person.self)[0]
-            greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
-            usageLabel.text = String(user.totalUsage)
-            limitLabel.text = String(user.limitUsageGoal)
-            plasticBottleValue.text = String(user.bottleUsage)
-            plasticCupValue.text = String(user.cupUsage)
-            plasticBagValue.text = String(user.bagUsage)
-            foodPackagingValue.text = String(user.foodPackaging)
-            plasticSpoonValue.text = String(user.spoonUsage)
-            strawValue.text = String(user.strawUsage)
-            cigaretteButtValue.text = String(user.cigaretteUsage)
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewLoadData()
     }
     
     func calculateUsage()-> Int {
@@ -112,7 +99,6 @@ class HomeViewController: UIViewController {
             user.bottleUsage = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         plasticBottleValue.text = String(user.bottleUsage)
         usageLabel.text = String(user.totalUsage)
     }
@@ -122,7 +108,6 @@ class HomeViewController: UIViewController {
             user.cupUsage = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         plasticCupValue.text = String(user.cupUsage)
         usageLabel.text = String(user.totalUsage)
     }
@@ -152,7 +137,6 @@ class HomeViewController: UIViewController {
             user.spoonUsage = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         plasticSpoonValue.text = String(user.spoonUsage)
         usageLabel.text = String(user.totalUsage)
     }
@@ -162,7 +146,6 @@ class HomeViewController: UIViewController {
             user.strawUsage = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         strawValue.text = String(user.strawUsage)
         usageLabel.text = String(user.totalUsage)
     }
@@ -175,6 +158,29 @@ class HomeViewController: UIViewController {
         
         cigaretteButtValue.text = String(user.cigaretteUsage)
         usageLabel.text = String(user.totalUsage)
+    }
+    
+    // Load Data from other VC of after app was destroyed
+    func viewLoadData(){
+        bottleStepper.value = Double(user.bottleUsage)
+        cupStepper.value = Double(user.cupUsage)
+        bagStepper.value = Double(user.bagUsage)
+        foodPackagingStepper.value = Double(user.foodPackaging)
+        spoonStepper.value = Double(user.spoonUsage)
+        strawStepper.value = Double(user.strawUsage)
+        cigaretteStepper.value = Double(user.cigaretteUsage)
+        
+        greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
+        limitLabel.text = String(user.limitUsageGoal)
+        usageLabel.text = String(user.totalUsage)
+        limitLabel.text = String(user.limitUsageGoal)
+        plasticBottleValue.text = String(user.bottleUsage)
+        plasticCupValue.text = String(user.cupUsage)
+        plasticBagValue.text = String(user.bagUsage)
+        foodPackagingValue.text = String(user.foodPackaging)
+        plasticSpoonValue.text = String(user.spoonUsage)
+        strawValue.text = String(user.strawUsage)
+        cigaretteButtValue.text = String(user.cigaretteUsage)
     }
     
 

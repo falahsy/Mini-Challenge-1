@@ -21,17 +21,19 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     var newsDatePublished = [String]()
     var newsUrl = [String]()
     
-    var url = "https://newsapi.org/v2/everything?q=%22plastic%20waste%22&from=2019-03-26&sortBy=publishedAt&apiKey=a7b4ac71ee6640f4aecdabc90edc5304"
+    var url = "https://newsapi.org/v2/everything?q=%22plastic%20waste%22&from="
     
     let fromDateNews = Date().description.prefix(10)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        url = "\(url)\(fromDateNews)&sortBy=publishedAt&apiKey=a7b4ac71ee6640f4aecdabc90edc5304"
+        
         newsTableView.estimatedRowHeight = 200
         newsTableView.rowHeight = UITableView.automaticDimension
 
-         getNewsJSON()
+        getNewsJSON()
         
         newsTableView.delegate = self
         newsTableView.dataSource = self

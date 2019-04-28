@@ -8,16 +8,20 @@
 
 import UIKit
 import SCLAlertView
+import RealmSwift
 
 class SetLimitViewController: UIViewController {
 
     @IBOutlet weak var limitValueLabel: UILabel!
-    var limitGoal: Int = 0
+    
+    let database = try! Realm()
+    var user = Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        user = database.objects(Person.self)[0]
     }
     
     @IBAction func setLimitStepper(_ sender: UIStepper) {
@@ -32,9 +36,10 @@ class SetLimitViewController: UIViewController {
     @IBAction func doneButton(_ sender: Any) {
         
         if let limitTemp = limitValueLabel.text {
-            self.limitGoal = Int(limitTemp)!
+            try! database.write {
+                user.limitUsageGoal = Int(limitTemp)!
+            }
         }
-        
         SCLAlertView().showSuccess("Congratulation!", subTitle: "Goal has been set")
         
         self.dismiss(animated: true, completion: nil)

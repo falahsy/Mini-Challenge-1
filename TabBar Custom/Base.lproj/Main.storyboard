@@ -138,35 +138,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SwO-CH-oBv">
                                 <rect key="frame" x="0.0" y="100" width="414" height="231"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuG-Dr-c2x" userLabel="First Input">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nick name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuG-Dr-c2x" userLabel="First Input">
                                         <rect key="frame" x="52" y="16" width="297" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="honorifix-prefix"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zr-h1-Y8l" userLabel="Middle Input">
-                                        <rect key="frame" x="52" y="68" width="297" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="additional-name"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKt-Sj-ftk" userLabel="Las Input">
-                                        <rect key="frame" x="52" y="120" width="297" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="hKt-Sj-ftk" firstAttribute="leading" secondItem="6zr-h1-Y8l" secondAttribute="leading" id="8SA-DF-fE0"/>
-                                    <constraint firstAttribute="trailing" secondItem="hKt-Sj-ftk" secondAttribute="trailing" constant="65" id="Aab-pj-xXB"/>
-                                    <constraint firstItem="hKt-Sj-ftk" firstAttribute="top" secondItem="6zr-h1-Y8l" secondAttribute="bottom" constant="22" id="J6U-Qd-OQw"/>
-                                    <constraint firstItem="hKt-Sj-ftk" firstAttribute="leading" secondItem="cuG-Dr-c2x" secondAttribute="leading" id="Vmz-09-P5R"/>
-                                    <constraint firstItem="hKt-Sj-ftk" firstAttribute="trailing" secondItem="6zr-h1-Y8l" secondAttribute="trailing" id="a3y-Mm-VCi"/>
-                                    <constraint firstItem="hKt-Sj-ftk" firstAttribute="leading" secondItem="SwO-CH-oBv" secondAttribute="leading" constant="52" id="e8I-4Q-gfZ"/>
-                                    <constraint firstItem="6zr-h1-Y8l" firstAttribute="top" secondItem="cuG-Dr-c2x" secondAttribute="bottom" constant="22" id="gSL-sy-STp"/>
-                                    <constraint firstItem="hKt-Sj-ftk" firstAttribute="trailing" secondItem="cuG-Dr-c2x" secondAttribute="trailing" id="u2G-tZ-Irp"/>
+                                    <constraint firstAttribute="trailing" secondItem="cuG-Dr-c2x" secondAttribute="trailing" constant="65" id="asI-eA-6E2"/>
+                                    <constraint firstItem="cuG-Dr-c2x" firstAttribute="leading" secondItem="SwO-CH-oBv" secondAttribute="leading" constant="52" id="gov-1A-qQP"/>
                                     <constraint firstItem="cuG-Dr-c2x" firstAttribute="top" secondItem="SwO-CH-oBv" secondAttribute="top" constant="16" id="wEI-xO-qa8"/>
                                 </constraints>
                             </view>
@@ -194,8 +176,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="firstNameTextInput" destination="cuG-Dr-c2x" id="MzA-JT-fkn"/>
-                        <outlet property="lastNameTextInput" destination="hKt-Sj-ftk" id="oLL-vF-Ap7"/>
-                        <outlet property="middleNameTextInput" destination="6zr-h1-Y8l" id="naW-l9-HGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qct-lo-L6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -372,7 +352,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="38d-kC-qGw">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="38d-kC-qGw">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="plasticBottleStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="ThH-nD-h2h"/>
@@ -415,7 +395,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Q91-Yy-kKU">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Q91-Yy-kKU">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="plasticCupStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="Qiq-fA-S8I"/>
@@ -458,7 +438,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-X8-ZHq">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-X8-ZHq">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="plasticBagStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="DcU-6h-Lwk"/>
@@ -501,7 +481,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="v62-hc-GOw">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="v62-hc-GOw">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="foodPackagingStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="hgt-yO-HZS"/>
@@ -544,7 +524,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-Mj-iw1">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-Mj-iw1">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="plasticSpoonStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="Ted-og-faH"/>
@@ -587,7 +567,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-hp-Chc">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-hp-Chc">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="strawStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="hrP-jC-0ys"/>
@@ -630,7 +610,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PBj-0g-a9w">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PBj-0g-a9w">
                                         <rect key="frame" x="232" y="12.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="cigaretteButtStepper:" destination="cSt-cz-ba5" eventType="valueChanged" id="IgZ-nO-fNZ"/>
@@ -706,7 +686,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="j1X-a9-f2X"/>
                     <connections>
+                        <outlet property="bagStepper" destination="sWc-X8-ZHq" id="Kh1-SX-Pff"/>
+                        <outlet property="bottleStepper" destination="38d-kC-qGw" id="MUf-pN-dJ6"/>
                         <outlet property="cigaretteButtValue" destination="2vU-Ix-mKa" id="JgL-IX-kgz"/>
+                        <outlet property="cigaretteStepper" destination="PBj-0g-a9w" id="rER-gq-VIS"/>
+                        <outlet property="cupStepper" destination="Q91-Yy-kKU" id="Ujp-9L-S5M"/>
+                        <outlet property="foodPackagingStepper" destination="v62-hc-GOw" id="6Es-VV-Lop"/>
                         <outlet property="foodPackagingValue" destination="j27-sH-NnY" id="ffc-Sv-Xl2"/>
                         <outlet property="greetingNameLabel" destination="8HY-r1-3vO" id="XAp-SS-BFp"/>
                         <outlet property="limitLabel" destination="KF1-9S-fkc" id="ST2-Qq-S8P"/>
@@ -714,6 +699,8 @@
                         <outlet property="plasticBottleValue" destination="oSm-q7-1L2" id="M4G-Fw-7T9"/>
                         <outlet property="plasticCupValue" destination="tgp-rD-mhG" id="BHx-1w-iwI"/>
                         <outlet property="plasticSpoonValue" destination="1zK-sq-bMZ" id="AEA-U3-vB3"/>
+                        <outlet property="spoonStepper" destination="qEf-Mj-iw1" id="N5M-fR-Hup"/>
+                        <outlet property="strawStepper" destination="g8b-hp-Chc" id="THM-l4-rS1"/>
                         <outlet property="strawValue" destination="O44-52-iuU" id="hrA-nB-EIq"/>
                         <outlet property="usageLabel" destination="odR-Ox-AXK" id="QrT-Hi-a4F"/>
                     </connections>
@@ -783,7 +770,7 @@
         <!--History-->
         <scene sceneID="tdy-w9-3qx">
             <objects>
-                <viewController id="VaH-4F-Hwc" sceneMemberID="viewController">
+                <viewController id="VaH-4F-Hwc" customClass="HistoryViewController" customModule="TabBar_Custom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ecp-A3-ex3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

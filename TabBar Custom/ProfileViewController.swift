@@ -7,27 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
+import SCLAlertView
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var firstNameTextInput: UITextField!
-    @IBOutlet weak var middleNameTextInput: UITextField!
-    @IBOutlet weak var lastNameTextInput: UITextField!
-    var firstName: String = ""
-    var middleName: String = ""
-    var lastName: String = ""
     
-    var isValidName: Bool = false
+    let database = try! Realm()
+    var user = Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        user = database.objects(Person.self)[0]
+        
         firstNameTextInput.text = ""
-        middleNameTextInput.text = ""
-        lastNameTextInput.text = ""
 
         // Do any additional setup after loading the view.
-        
     }
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -35,7 +32,15 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        
+        if firstNameTextInput.text == "" {
+            SCLAlertView().showInfo("Failed", subTitle: "Nick name must be filled in")
+        } else {
+            try! database.write {
+                user.nickName = firstNameTextInput.text!
+            }
+            SCLAlertView().showSuccess("Congratulation!", subTitle: "New name has been set")
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     /*
     // MARK: - Navigation

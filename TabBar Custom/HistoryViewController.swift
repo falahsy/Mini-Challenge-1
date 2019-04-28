@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HistoryViewController: UIViewController {
 
+    let database = try! Realm()
+    var user = Person()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        user = database.objects(Person.self)[0]
+        
     }
     
 
