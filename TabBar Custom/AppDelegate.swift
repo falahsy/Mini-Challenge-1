@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             (granted, error) in
             print("granted : \(granted)")
         }
+        
         return true
     }
     

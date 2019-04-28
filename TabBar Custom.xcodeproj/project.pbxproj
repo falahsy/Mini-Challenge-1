@@ -13,6 +13,7 @@
 		160611762260B2A0003CE493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160611752260B2A0003CE493 /* Assets.xcassets */; };
 		160611792260B2A0003CE493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160611772260B2A0003CE493 /* LaunchScreen.storyboard */; };
 		16062B99227551E0009CCD8E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16062B98227551E0009CCD8E /* Person.swift */; };
+		16062B9B2275F6A6009CCD8E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16062B9A2275F6A6009CCD8E /* HistoryViewController.swift */; };
 		16CCC8F82273738C004A97E0 /* SetLimitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CCC8F72273738C004A97E0 /* SetLimitViewController.swift */; };
 		16D2ED4B2271D34D00C4D131 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED4A2271D34D00C4D131 /* SettingViewController.swift */; };
 		16D2ED4D2271DDC000C4D131 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D2ED4C2271DDC000C4D131 /* ProfileViewController.swift */; };
@@ -37,6 +38,7 @@
 		160611782260B2A0003CE493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1606117A2260B2A0003CE493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16062B98227551E0009CCD8E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		16062B9A2275F6A6009CCD8E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		16CCC8F72273738C004A97E0 /* SetLimitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLimitViewController.swift; sourceTree = "<group>"; };
 		16D2ED4A2271D34D00C4D131 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		16D2ED4C2271DDC000C4D131 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				16DB033C22734464003EEDE3 /* NewsTableViewCell.swift */,
 				16CCC8F72273738C004A97E0 /* SetLimitViewController.swift */,
 				16062B98227551E0009CCD8E /* Person.swift */,
+				16062B9A2275F6A6009CCD8E /* HistoryViewController.swift */,
 			);
 			path = "TabBar Custom";
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				160611712260B29F003CE493 /* ViewController.swift in Sources */,
 				16DB033D22734464003EEDE3 /* NewsTableViewCell.swift in Sources */,
 				16D2ED4F2271E04300C4D131 /* RemainderViewController.swift in Sources */,
+				16062B9B2275F6A6009CCD8E /* HistoryViewController.swift in Sources */,
 				16CCC8F82273738C004A97E0 /* SetLimitViewController.swift in Sources */,
 				16DB03392272E90A003EEDE3 /* HomeViewController.swift in Sources */,
 				16062B99227551E0009CCD8E /* Person.swift in Sources */,

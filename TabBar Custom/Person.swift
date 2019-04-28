@@ -7,11 +7,21 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Person {
-    var nickName: String = ""
-    var limitTargetUsagePlasticInADay: Int = 0
-    var plasticUsage = [0,0,0,0,0,0,0]
+class Person: Object {
+    @objc dynamic var nickName: String = "Mr/s. Plastic Warrior"
+    @objc dynamic var limitTargetUsagePlasticInADay: Int = 0
+    
+    @objc dynamic var bottleUsage: Int = 0
+    @objc dynamic var cupUsage: Int = 0
+    @objc dynamic var bagUsage: Int = 0
+    @objc dynamic var foodPackaging: Int = 0
+    @objc dynamic var spoonUsage: Int = 0
+    @objc dynamic var strawUsage: Int = 0
+    @objc dynamic var cigaretteUsage: Int = 0
+    @objc dynamic var totalUsage: Int = 0
+    @objc dynamic var limitUsageGoal: Int = 0
     
     /*
      usageArray Index Info:

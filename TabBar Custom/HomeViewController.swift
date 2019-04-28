@@ -8,6 +8,8 @@
 
 import UIKit
 import UserNotifications
+import RealmSwift
+import SCLAlertView
 
 class HomeViewController: UIViewController {
 
@@ -44,8 +46,8 @@ class HomeViewController: UIViewController {
     let usageLimit = 11
     let noPlastic = true
     
-    var nickName = "Spongebob!"
     var user = Person()
+    let database = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,72 +60,121 @@ class HomeViewController: UIViewController {
 //        } else if usageLimit < limit{
 //            notifikasiOverLimit()
 //        }
-        user.nickName = self.nickName
         
-        greetingNameLabel.text = "Hello,\n\(user.nickName)"
+        
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+
+        
+//        try! database.write {
+//            database.deleteAll()
+//        }
+        
+        if database.objects(Person.self).count == 0 {
+            let alert = SCLAlertView()
+            let nickNameTextField = alert.addTextField("Enter nickname")
+            let limitUsageTextField = alert.addTextField("Enter limit Usage")
+            alert.addButton("Set") {
+                if nickNameTextField.text != nil &&  limitUsageTextField.text != nil {
+                    try! self.database.write {
+                        self.database.add(self.user)
+                        self.user.nickName = nickNameTextField.text!
+                        self.user.limitUsageGoal = Int(limitUsageTextField.text!)!
+                        
+                        self.greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
+                        self.limitLabel.text = String(self.user.limitUsageGoal)
+                    }
+                }
+            }
+            alert.showEdit("Alert", subTitle: "Set Your Nickname and Limit Plastic Usage per Day")
+        } else {
+            user = database.objects(Person.self)[0]
+            greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
+            usageLabel.text = String(user.totalUsage)
+            limitLabel.text = String(user.limitUsageGoal)
+            plasticBottleValue.text = String(user.bottleUsage)
+            plasticCupValue.text = String(user.cupUsage)
+            plasticBagValue.text = String(user.bagUsage)
+            foodPackagingValue.text = String(user.foodPackaging)
+            plasticSpoonValue.text = String(user.spoonUsage)
+            strawValue.text = String(user.strawUsage)
+            cigaretteButtValue.text = String(user.cigaretteUsage)
+        }
+        
     }
     
     func calculateUsage()-> Int {
-        var total = 0
-        for item in user.plasticUsage {
-            total += item
-        }
-        return total
+        return user.bottleUsage + user.cupUsage + user.bagUsage + user.foodPackaging + user.spoonUsage + user.strawUsage + user.cigaretteUsage
     }
     
     @IBAction func plasticBottleStepper(_ sender: UIStepper) {
-        user.plasticUsage[0] = Int(sender.value)
-        plasticBottleValue.text = String(user.plasticUsage[0])
+        try! database.write {
+            user.bottleUsage = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
         
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        plasticBottleValue.text = String(user.bottleUsage)
+        usageLabel.text = String(user.totalUsage)
     }
     
     @IBAction func plasticCupStepper(_ sender: UIStepper) {
-        user.plasticUsage[1] = Int(sender.value)
-        plasticCupValue.text = String(user.plasticUsage[1])
+        try! database.write {
+            user.cupUsage = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
         
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        plasticCupValue.text = String(user.cupUsage)
+        usageLabel.text = String(user.totalUsage)
     }
     
     @IBAction func plasticBagStepper(_ sender: UIStepper) {
-        user.plasticUsage[2] = Int(sender.value)
-        plasticBagValue.text = String(user.plasticUsage[2])
+        try! database.write {
+            user.bagUsage = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
         
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        plasticBagValue.text = String(user.bagUsage)
+        usageLabel.text = String(user.totalUsage)
     }
     
     @IBAction func foodPackagingStepper(_ sender: UIStepper) {
-        user.plasticUsage[3] = Int(sender.value)
-        foodPackagingValue.text = String(user.plasticUsage[3])
+        try! database.write {
+            user.foodPackaging = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
         
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        foodPackagingValue.text = String(user.foodPackaging)
+        usageLabel.text = String(user.totalUsage)
     }
     
     @IBAction func plasticSpoonStepper(_ sender: UIStepper) {
-        user.plasticUsage[4] = Int(sender.value)
-        plasticSpoonValue.text = String(user.plasticUsage[4])
+        try! database.write {
+            user.spoonUsage = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
         
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        plasticSpoonValue.text = String(user.spoonUsage)
+        usageLabel.text = String(user.totalUsage)
     }
     
     @IBAction func strawStepper(_ sender: UIStepper) {
-        user.plasticUsage[5] = Int(sender.value)
-        strawValue.text = String(user.plasticUsage[5])
+        try! database.write {
+            user.strawUsage = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
         
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        strawValue.text = String(user.strawUsage)
+        usageLabel.text = String(user.totalUsage)
     }
     
     @IBAction func cigaretteButtStepper(_ sender: UIStepper) {
-        user.plasticUsage[6] = Int(sender.value)
-        cigaretteButtValue.text = String(user.plasticUsage[6])
-        usageValue = calculateUsage()
-        usageLabel.text = String(usageValue)
+        try! database.write {
+            user.cigaretteUsage = Int(sender.value)
+            user.totalUsage = calculateUsage()
+        }
+        
+        cigaretteButtValue.text = String(user.cigaretteUsage)
+        usageLabel.text = String(user.totalUsage)
     }
     
 
