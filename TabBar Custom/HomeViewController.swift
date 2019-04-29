@@ -11,6 +11,12 @@ import UserNotifications
 import RealmSwift
 import SCLAlertView
 
+extension Date {
+    var tomorrow: Date? {
+        return Calendar.current.date(byAdding: .day, value: 1, to: self)
+    }
+}
+
 class HomeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var greetingNameLabel: UILabel!
@@ -49,8 +55,12 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     var currentDay = String()
     var lastOpenedDay = String()
     
+    var isNewUser: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        greetingNameLabel.textColor = .white
         
         createGradientLayer()
         
@@ -114,17 +124,16 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        greetingNameLabel.textColor = .white
         
         self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
         
         formatter.dateStyle = .medium
         formatter.dateFormat = "EEEE"
         currentDay = formatter.string(from: Date())
-//        currentDay = "Tuesday"
         
-        if lastOpenedDay != currentDay{
+        if lastOpenedDay != currentDay && isNewUser == false {
             lastOpenedDay = currentDay
-            
             if user.totalUsage == triggerWarningLimit {
                 notifikasiAlmostLimit()
             } else if user.totalUsage == 0 {
@@ -133,6 +142,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 notifikasiOverLimit()
             }
             resetData()
+        } else {
+            lastOpenedDay = currentDay
+            isNewUser = false
         }
         viewLoadData()
     }

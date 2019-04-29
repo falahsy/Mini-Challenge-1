@@ -463,13 +463,26 @@ Earth needs you! </string>
                     <view key="view" contentMode="scaleToFill" id="i9A-k5-ewB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS3-Ux-G7C">
+                                <rect key="frame" x="20" y="97" width="374" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">We love our lovely home.
+We designed, created, and built an apps to encourage you to protect the environment with us.
+
+@ Group 5 Apple Developer Academy</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EaP-ow-UHd"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEf-gc-Ib0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3604" y="1694"/>
+            <point key="canvasLocation" x="3602.898550724638" y="1693.5267857142856"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="qT9-A0-deG">
@@ -484,51 +497,51 @@ Earth needs you! </string>
                                 <color key="backgroundColor" name="ColorBackground1"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-r1-3vO">
-                                <rect key="frame" x="20" y="108" width="374" height="58.5"/>
+                                <rect key="frame" x="20" y="108" width="374" height="63"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Hello, Your Name Here">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="25" name="SFProDisplay-Bold"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="27" name="SFProDisplay-Heavy"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Usage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgz-hg-Odp">
-                                <rect key="frame" x="40" y="216.5" width="150" height="26.5"/>
+                                <rect key="frame" x="40" y="221" width="150" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="uR0-Wm-qRM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Limit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTj-Zq-t9d">
-                                <rect key="frame" x="224" y="216.5" width="150" height="26.5"/>
+                                <rect key="frame" x="224" y="221" width="150" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="QRK-v2-K7s"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odR-Ox-AXK">
-                                <rect key="frame" x="40" y="243" width="150" height="62.5"/>
+                                <rect key="frame" x="40" y="247.5" width="150" height="62.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="AHa-wt-TPJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF1-9S-fkc">
-                                <rect key="frame" x="224" y="243" width="150" height="62.5"/>
+                                <rect key="frame" x="224" y="247.5" width="150" height="62.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="GFY-6H-VuX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uEG-b8-VDU">

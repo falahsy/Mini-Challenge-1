@@ -161,9 +161,6 @@ class FRPieChartUIView: UIView {
         
         //draw the stroke
         //plusPath.stroke()
-        
-        print("startAngle", startAngle)
-        print("endAngle", endAngle)
     }
 }
 
