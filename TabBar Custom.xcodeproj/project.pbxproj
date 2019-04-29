@@ -23,6 +23,7 @@
 		16DB03392272E90A003EEDE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB03382272E90A003EEDE3 /* HomeViewController.swift */; };
 		16DB033B22734139003EEDE3 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB033A22734139003EEDE3 /* NewsViewController.swift */; };
 		16DB033D22734464003EEDE3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB033C22734464003EEDE3 /* NewsTableViewCell.swift */; };
+		16DDE4592276D41C004AE7E7 /* FRPieChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDE4582276D41C004AE7E7 /* FRPieChartUIView.swift */; };
 		E9976337F1A77419BF6C79E9 /* Pods_TabBar_Custom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CB664CAF63C229AC4C21DD /* Pods_TabBar_Custom.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		16DB03382272E90A003EEDE3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		16DB033A22734139003EEDE3 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		16DB033C22734464003EEDE3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		16DDE4582276D41C004AE7E7 /* FRPieChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPieChartUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				16CCC8F72273738C004A97E0 /* SetLimitViewController.swift */,
 				16062B98227551E0009CCD8E /* Person.swift */,
 				16062B9A2275F6A6009CCD8E /* HistoryViewController.swift */,
+				16DDE4582276D41C004AE7E7 /* FRPieChartUIView.swift */,
 			);
 			path = "TabBar Custom";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				16D2ED552271E9AD00C4D131 /* AboutUsViewController.swift in Sources */,
 				160611712260B29F003CE493 /* ViewController.swift in Sources */,
+				16DDE4592276D41C004AE7E7 /* FRPieChartUIView.swift in Sources */,
 				16DB033D22734464003EEDE3 /* NewsTableViewCell.swift in Sources */,
 				16D2ED4F2271E04300C4D131 /* RemainderViewController.swift in Sources */,
 				16062B9B2275F6A6009CCD8E /* HistoryViewController.swift in Sources */,

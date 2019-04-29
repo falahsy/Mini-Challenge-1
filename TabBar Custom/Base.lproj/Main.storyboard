@@ -281,7 +281,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-K5-po3">
                                         <rect key="frame" x="40" y="33" width="334" height="203"/>
-                                        <mutableString key="text">Actic is an application that helps you track your single-use (disposable) plastic usage daily. Actic saves your daily usage, and you can review your activity monthly. Actic also has limit features and will remind you if you surpass the limit or even if you didn’t use any disposable plastic at all. You can also read the news regarding the environment through our news features. </mutableString>
+                                        <string key="text">Actic is an application that helps you track your single-use (disposable) plastic usage daily. Actic saves your daily usage, and you can review your activity monthly. Actic also has limit features and will remind you if you surpass the limit or even if you didn’t use any disposable plastic at all. You can also read the news regarding the environment through our news features. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -309,9 +309,9 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbz-ZN-9sa">
                                         <rect key="frame" x="40" y="33" width="334" height="426.5"/>
-                                        <mutableString key="text">Based on the research that conducted by Earth Day, Indonesia is the 2nd country that generated most plastic waste in the world and mismanaged If you think recycling the plastic waste is enough, the fact it is not nearly enough. While people still littering, recycling is far from perfect, many plastics can’t be efficiently recycled and will end up in the landfill regardless of which bin they were put in. Some localities lack the infrastructure to sort and recycle plastics. Plastic pollution is killing the earth, and ocean is taking the biggest hit. People also not aware with the consequences they make with using too much disposable plastic.
+                                        <string key="text">Based on the research that conducted by Earth Day, Indonesia is the 2nd country that generated most plastic waste in the world and mismanaged If you think recycling the plastic waste is enough, the fact it is not nearly enough. While people still littering, recycling is far from perfect, many plastics can’t be efficiently recycled and will end up in the landfill regardless of which bin they were put in. Some localities lack the infrastructure to sort and recycle plastics. Plastic pollution is killing the earth, and ocean is taking the biggest hit. People also not aware with the consequences they make with using too much disposable plastic.
 
-For this reason, it is much more important to focus on reducing your own level of plastic consumption. </mutableString>
+For this reason, it is much more important to focus on reducing your own level of plastic consumption. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -339,11 +339,11 @@ For this reason, it is much more important to focus on reducing your own level o
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh7-FZ-yN9">
                                         <rect key="frame" x="40" y="33" width="334" height="203"/>
-                                        <mutableString key="text">You can start small with Reuse things you can reuse, also refuse and reduce plastic waste on a daily basis, such as:
+                                        <string key="text">You can start small with Reuse things you can reuse, also refuse and reduce plastic waste on a daily basis, such as:
 1. Don’t use or refuse plastic bags, plastic bottles, straws.
 2. Reduce product that use plastic packaging
 3. Don’t litter
-4. Recycle or Reuse what you can </mutableString>
+4. Recycle or Reuse what you can </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -371,7 +371,7 @@ For this reason, it is much more important to focus on reducing your own level o
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aN-92-woC">
                                         <rect key="frame" x="40" y="33" width="334" height="122"/>
-                                        <string key="text">The categories we use is based on Plastic Pollution Calculator by Earth Day (earthday.org). Then actic simplify the categories into 8 most generated disposable plastic by Indonesian.
+                                        <string key="text">The categories we use is based on Plastic Pollution Calculator by Earth Day (earthday.org). Then actic simplify the categories into 7 most generated disposable plastic by Indonesian.
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -400,12 +400,12 @@ For this reason, it is much more important to focus on reducing your own level o
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2W-Ct-8sn">
                                         <rect key="frame" x="40" y="33" width="334" height="406"/>
-                                        <mutableString key="text">In Asia, average plastic use is currently just one-fifth that level, at 20 kilograms (44 pounds) per person. That figure is expected to grow rapidly as the region’s economies expand.
+                                        <string key="text">In Asia, average plastic use is currently just one-fifth that level, at 20 kilograms (44 pounds) per person. That figure is expected to grow rapidly as the region’s economies expand.
 (source: https://www.theglobalist.com/plastic-consumption-the-good-the-bad-and-the-ugly/ )
 
 Based on that, we generated 50g of plastic waste daily and it is increasing. 50g is equal with 5 plastic bottles, so you can start at 5. While you start to track your disposable plastic daily, you can adjust your limit in the process. We hope you keep consistent with your limit and start to reduce the limit over the time.
 
-Earth needs you! </mutableString>
+Earth needs you! </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -945,14 +945,343 @@ Earth needs you! </mutableString>
                     <view key="view" contentMode="scaleToFill" id="Ecp-A3-ex3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fj-zC-Ytq" customClass="FRPieChartUIView" customModule="TabBar_Custom" customModuleProvider="target">
+                                <rect key="frame" x="20" y="123" width="170" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="dys-Qc-0Tx"/>
+                                    <constraint firstAttribute="width" constant="170" id="z3Z-6R-Vj3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="diameter">
+                                        <real key="value" value="165"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tlX-cL-mJu">
+                                <rect key="frame" x="210" y="108" width="176.5" height="205"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NR3-R6-Ng1">
+                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAd-qf-yWC">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="Nl1-HM-gqG"/>
+                                                    <constraint firstAttribute="width" constant="25" id="jBc-zg-Nna"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlasticBottle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-L4-PbK">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BAd-qf-yWC" firstAttribute="leading" secondItem="NR3-R6-Ng1" secondAttribute="leading" id="EMJ-yL-uP1"/>
+                                            <constraint firstAttribute="trailing" secondItem="gvB-L4-PbK" secondAttribute="trailing" id="Uv7-iJ-lEk"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-cy-hlL">
+                                        <rect key="frame" x="0.0" y="30" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXY-hM-9Gy">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="3ci-uL-FJf"/>
+                                                    <constraint firstAttribute="width" constant="25" id="JFF-EJ-a5Y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastic Spoon/Fork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np9-30-0ba">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qXY-hM-9Gy" firstAttribute="leading" secondItem="E1D-cy-hlL" secondAttribute="leading" id="B6R-3y-4y3"/>
+                                            <constraint firstAttribute="trailing" secondItem="Np9-30-0ba" secondAttribute="trailing" id="wTQ-5k-IFW"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j29-rH-PeX">
+                                        <rect key="frame" x="0.0" y="60" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHW-Vo-dmu">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="0Mc-9E-nfU"/>
+                                                    <constraint firstAttribute="height" constant="25" id="Qgd-MX-Qj0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastic Cup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI2-wV-6bp">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="XI2-wV-6bp" secondAttribute="trailing" id="AOB-Pw-UAe"/>
+                                            <constraint firstItem="MHW-Vo-dmu" firstAttribute="leading" secondItem="j29-rH-PeX" secondAttribute="leading" id="syb-Qt-0AN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="usk-zn-pYV">
+                                        <rect key="frame" x="0.0" y="90" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-kK-PQo">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="FhA-3I-nMO"/>
+                                                    <constraint firstAttribute="width" constant="25" id="QjI-pU-Pof"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbC-p6-7hH">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Adk-kK-PQo" firstAttribute="leading" secondItem="usk-zn-pYV" secondAttribute="leading" id="1ns-en-CTH"/>
+                                            <constraint firstAttribute="trailing" secondItem="bbC-p6-7hH" secondAttribute="trailing" id="o7K-46-1dI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V8z-4o-lvt">
+                                        <rect key="frame" x="0.0" y="120" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDh-da-Za7">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="gHy-EQ-y5q"/>
+                                                    <constraint firstAttribute="width" constant="25" id="wn7-XI-FaZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastic Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF6-pS-jKW">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="TF6-pS-jKW" secondAttribute="trailing" id="Fuw-3K-9gU"/>
+                                            <constraint firstItem="JDh-da-Za7" firstAttribute="leading" secondItem="V8z-4o-lvt" secondAttribute="leading" id="RH8-5h-amg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pb5-3N-b9p">
+                                        <rect key="frame" x="0.0" y="150" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rX-ab-wkj">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="3qI-QN-sjQ"/>
+                                                    <constraint firstAttribute="height" constant="25" id="tqz-cu-gXx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cigarette Butt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16f-DF-dhr">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="16f-DF-dhr" secondAttribute="trailing" id="8Me-Dr-Dke"/>
+                                            <constraint firstItem="0rX-ab-wkj" firstAttribute="leading" secondItem="pb5-3N-b9p" secondAttribute="leading" id="GGW-sE-5ts"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CVG-rX-dtf">
+                                        <rect key="frame" x="0.0" y="180" width="176.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-QC-6d8">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="13u-fr-tZ8"/>
+                                                    <constraint firstAttribute="width" constant="25" id="727-KJ-hdy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Packaging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-Sj-rVA">
+                                                <rect key="frame" x="33" y="0.0" width="143.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YlJ-Sj-rVA" secondAttribute="trailing" id="HB4-mG-KAb"/>
+                                            <constraint firstItem="bWc-QC-6d8" firstAttribute="leading" secondItem="CVG-rX-dtf" secondAttribute="leading" id="qUb-ZI-3ug"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlF-b9-IS3">
+                                <rect key="frame" x="0.0" y="338" width="414" height="42"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Mkt-VC-V5d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wtG-A8-PQI">
+                                <rect key="frame" x="0.0" y="400" width="414" height="176"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-ef-MHz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="  Current Month">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="currentMonthButtonClick:" destination="VaH-4F-Hwc" eventType="touchUpInside" id="LKW-wc-XHq"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="Xyx-QN-ZmF">
+                                        <rect key="frame" x="0.0" y="33" width="414" height="143"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvx-Nq-imQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="143"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="260" id="fnY-wl-9VP"/>
+                                                    <constraint firstAttribute="height" constant="143" id="uho-VJ-vfd"/>
+                                                </constraints>
+                                                <string key="text">     Plastic bottle      Plastic Cup                                     Plastic Bag      Food Packaging      Plastic Spoon/Fork      Straw      Cigarette Butt</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x100 x100 x100 x100 x100 x100 x100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF7-Sa-oWb">
+                                                <rect key="frame" x="339" y="0.5" width="75" height="142.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xyx-QN-ZmF" firstAttribute="leading" secondItem="wtG-A8-PQI" secondAttribute="leading" id="IYU-Jh-e29"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xyx-QN-ZmF" secondAttribute="bottom" id="QBv-Za-XhT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xyx-QN-ZmF" secondAttribute="trailing" id="aFQ-Vc-u8S"/>
+                                    <constraint firstItem="Xyx-QN-ZmF" firstAttribute="top" secondItem="8Fu-ef-MHz" secondAttribute="bottom" id="eNO-Rs-XBZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oCN-3I-PgK">
+                                <rect key="frame" x="0.0" y="576" width="414" height="176"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sv3-tT-2f5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="  Last Month">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lastMonthButtonClick:" destination="VaH-4F-Hwc" eventType="touchUpInside" id="QZf-59-wlZ"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="nkC-NY-PiD">
+                                        <rect key="frame" x="0.0" y="33" width="414" height="143"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2b-u0-MM2">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="143"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="143" id="QRD-6M-ufb"/>
+                                                    <constraint firstAttribute="width" constant="260" id="sXZ-wD-fHD"/>
+                                                </constraints>
+                                                <string key="text">     Plastic bottle      Plastic Cup                                     Plastic Bag      Food Packaging      Plastic Spoon/Fork      Straw      Cigarette Butt</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x100 x100 x100 x100 x100 x100 x100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-YO-9ej">
+                                                <rect key="frame" x="319" y="0.5" width="95" height="142.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nkC-NY-PiD" firstAttribute="leading" secondItem="oCN-3I-PgK" secondAttribute="leading" id="0cF-hy-JKR"/>
+                                    <constraint firstItem="nkC-NY-PiD" firstAttribute="top" secondItem="Sv3-tT-2f5" secondAttribute="bottom" id="Asm-wp-8k6"/>
+                                    <constraint firstAttribute="trailing" secondItem="nkC-NY-PiD" secondAttribute="trailing" id="Ohm-G0-tMZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="nkC-NY-PiD" secondAttribute="bottom" id="i2k-8z-Kok"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jlF-b9-IS3" firstAttribute="top" secondItem="Ecp-A3-ex3" secondAttribute="top" constant="338" id="9cw-cZ-Rlv"/>
+                            <constraint firstAttribute="trailing" secondItem="oCN-3I-PgK" secondAttribute="trailing" id="AgA-mP-sGf"/>
+                            <constraint firstItem="2fj-zC-Ytq" firstAttribute="top" secondItem="jwD-lh-sKJ" secondAttribute="top" constant="35" id="F5i-GO-tra"/>
+                            <constraint firstItem="tlX-cL-mJu" firstAttribute="leading" secondItem="2fj-zC-Ytq" secondAttribute="trailing" constant="20" id="K6G-Rv-lEr"/>
+                            <constraint firstAttribute="trailing" secondItem="wtG-A8-PQI" secondAttribute="trailing" id="LQc-In-yNa"/>
+                            <constraint firstItem="wtG-A8-PQI" firstAttribute="top" secondItem="jlF-b9-IS3" secondAttribute="bottom" constant="20" id="Wwm-pB-IbC"/>
+                            <constraint firstItem="oCN-3I-PgK" firstAttribute="top" secondItem="wtG-A8-PQI" secondAttribute="bottom" id="hXj-xm-oVh"/>
+                            <constraint firstItem="jlF-b9-IS3" firstAttribute="leading" secondItem="jwD-lh-sKJ" secondAttribute="leading" id="ka2-6X-rLU"/>
+                            <constraint firstItem="2fj-zC-Ytq" firstAttribute="leading" secondItem="jwD-lh-sKJ" secondAttribute="leading" constant="20" id="n0r-vX-82E"/>
+                            <constraint firstItem="jwD-lh-sKJ" firstAttribute="trailing" secondItem="jlF-b9-IS3" secondAttribute="trailing" id="s9A-90-hhn"/>
+                            <constraint firstItem="oCN-3I-PgK" firstAttribute="leading" secondItem="jwD-lh-sKJ" secondAttribute="leading" id="uDL-19-XVF"/>
+                            <constraint firstItem="wtG-A8-PQI" firstAttribute="leading" secondItem="jwD-lh-sKJ" secondAttribute="leading" id="yfd-Kd-6Ej"/>
+                            <constraint firstItem="jlF-b9-IS3" firstAttribute="top" secondItem="tlX-cL-mJu" secondAttribute="bottom" constant="25" id="ytv-Fb-wRv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jwD-lh-sKJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="History" id="czc-DU-jCS"/>
+                    <connections>
+                        <outlet property="currentMonthButton" destination="8Fu-ef-MHz" id="dMm-8j-O5J"/>
+                        <outlet property="currentMonthStackDetail" destination="Xyx-QN-ZmF" id="4yZ-AF-9n8"/>
+                        <outlet property="currentMonthUsage" destination="ZF7-Sa-oWb" id="dAq-Qx-FLV"/>
+                        <outlet property="lastMonthButton" destination="Sv3-tT-2f5" id="a46-9c-1BK"/>
+                        <outlet property="lastMonthStackDetail" destination="nkC-NY-PiD" id="iIg-Eb-eOP"/>
+                        <outlet property="lastMonthUsage" destination="lo7-YO-9ej" id="44z-Vg-ghr"/>
+                        <outlet property="legendBagRect" destination="JDh-da-Za7" id="fOc-Ha-Vcn"/>
+                        <outlet property="legendBottleRect" destination="BAd-qf-yWC" id="TFB-LB-NJu"/>
+                        <outlet property="legendCigaretteButtRect" destination="0rX-ab-wkj" id="MfB-zF-xCZ"/>
+                        <outlet property="legendCupRect" destination="MHW-Vo-dmu" id="bon-6Q-d8n"/>
+                        <outlet property="legendFoodPackagingRect" destination="bWc-QC-6d8" id="QGO-uk-edZ"/>
+                        <outlet property="legendSpoonRect" destination="qXY-hM-9Gy" id="qyC-T8-BgA"/>
+                        <outlet property="legendStrawRect" destination="Adk-kK-PQo" id="yfY-I9-NZx"/>
+                        <outlet property="pieChart" destination="2fj-zC-Ytq" id="s6L-cr-uur"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fT6-Kj-euc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="960"/>
+            <point key="canvasLocation" x="-491.304347826087" y="959.59821428571422"/>
         </scene>
         <!--Setting-->
         <scene sceneID="R5I-Gm-MME">
