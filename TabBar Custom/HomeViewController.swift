@@ -51,18 +51,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if Int(usageLabel.text!)! > limit {
-//            notifikasiAlmostLimit()
-//        }
-//        } else if noPlastic == false{
-//            notifikasiNoPlastic()
-//        } else if usageLimit < limit{
-//            notifikasiOverLimit()
-//        }
-        
+        if Int(usageLabel.text!)! > limit {
+            notifikasiAlmostLimit()
+        } else if noPlastic == false{
+            notifikasiNoPlastic()
+        } else if usageLimit < limit{
+            notifikasiOverLimit()
+        }
+    
         createGradientLayer()
         
-        print(Realm.Configuration.defaultConfiguration.fileURL)
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
         
 //        try! database.write {
 //            database.deleteAll()
@@ -78,6 +77,12 @@ class HomeViewController: UIViewController {
                         self.database.add(self.user)
                         self.user.nickName = nickNameTextField.text!
                         self.user.limitUsageGoal = Int(limitUsageTextField.text!)!
+                        self.greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
+                        self.limitLabel.text = String(self.user.limitUsageGoal)
+                    }
+                } else {
+                    try! self.database.write {
+                        self.database.add(self.user)
                         self.greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
                         self.limitLabel.text = String(self.user.limitUsageGoal)
                     }
@@ -198,8 +203,8 @@ class HomeViewController: UIViewController {
 
     // -- Notification Function Start --
     func notifikasiAlmostLimit(){
-        content.title = "Congratulations!🎉"
-        content.body = "Cie congrats!"
+        content.title = "Warning"
+        content.body = "Your plastic usage today almost reach the limit"
         content.sound = UNNotificationSound.default
         let date = Date(timeIntervalSinceNow: 3)
         //        dateComponents.hour = 16

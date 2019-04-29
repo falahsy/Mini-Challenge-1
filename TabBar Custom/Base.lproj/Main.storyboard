@@ -263,15 +263,199 @@
             <objects>
                 <viewController title="FAQ" id="Oiw-u7-JwN" customClass="FAQViewController" customModule="TabBar_Custom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hkZ-UM-KiI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-M8-Hht">
+                                <rect key="frame" x="0.0" y="116" width="414" height="236"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y7-PY-cXI">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="What is Actic?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="whatIsActicClick:" destination="Oiw-u7-JwN" eventType="touchUpInside" id="Gdw-b7-YX4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-K5-po3">
+                                        <rect key="frame" x="40" y="33" width="334" height="203"/>
+                                        <mutableString key="text">Actic is an application that helps you track your single-use (disposable) plastic usage daily. Actic saves your daily usage, and you can review your activity monthly. Actic also has limit features and will remind you if you surpass the limit or even if you didn’t use any disposable plastic at all. You can also read the news regarding the environment through our news features. </mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Y7-PY-cXI" firstAttribute="top" secondItem="2qZ-M8-Hht" secondAttribute="top" id="HZO-as-AaH"/>
+                                    <constraint firstItem="2Y7-PY-cXI" firstAttribute="leading" secondItem="2qZ-M8-Hht" secondAttribute="leading" constant="20" id="OAr-et-PV1"/>
+                                    <constraint firstItem="kI9-K5-po3" firstAttribute="top" secondItem="2Y7-PY-cXI" secondAttribute="bottom" id="TYb-wB-GcE"/>
+                                    <constraint firstItem="kI9-K5-po3" firstAttribute="leading" secondItem="2qZ-M8-Hht" secondAttribute="leading" constant="40" id="Wfi-Os-YTE"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EQ5-N3-oag">
+                                <rect key="frame" x="0.0" y="352" width="414" height="459.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-WC-Hl6">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="How bad is the situation?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="howBadIsTheSituationClick:" destination="Oiw-u7-JwN" eventType="touchUpInside" id="DqI-Ln-gyY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbz-ZN-9sa">
+                                        <rect key="frame" x="40" y="33" width="334" height="426.5"/>
+                                        <mutableString key="text">Based on the research that conducted by Earth Day, Indonesia is the 2nd country that generated most plastic waste in the world and mismanaged If you think recycling the plastic waste is enough, the fact it is not nearly enough. While people still littering, recycling is far from perfect, many plastics can’t be efficiently recycled and will end up in the landfill regardless of which bin they were put in. Some localities lack the infrastructure to sort and recycle plastics. Plastic pollution is killing the earth, and ocean is taking the biggest hit. People also not aware with the consequences they make with using too much disposable plastic.
+
+For this reason, it is much more important to focus on reducing your own level of plastic consumption. </mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sbz-ZN-9sa" firstAttribute="top" secondItem="DG1-WC-Hl6" secondAttribute="bottom" id="iC8-gm-Q4g"/>
+                                    <constraint firstItem="DG1-WC-Hl6" firstAttribute="top" secondItem="EQ5-N3-oag" secondAttribute="top" id="npM-WP-BVs"/>
+                                    <constraint firstItem="DG1-WC-Hl6" firstAttribute="leading" secondItem="EQ5-N3-oag" secondAttribute="leading" constant="20" id="uAy-n0-CLf"/>
+                                    <constraint firstItem="sbz-ZN-9sa" firstAttribute="leading" secondItem="EQ5-N3-oag" secondAttribute="leading" constant="40" id="xkz-SA-9hv"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kel-JO-Ym0">
+                                <rect key="frame" x="0.0" y="811.5" width="414" height="236"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hse-jy-G2I">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="What can I do to help the situation?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="whatCanIDoToHelpClick:" destination="Oiw-u7-JwN" eventType="touchUpInside" id="FfB-Dn-kLu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh7-FZ-yN9">
+                                        <rect key="frame" x="40" y="33" width="334" height="203"/>
+                                        <mutableString key="text">You can start small with Reuse things you can reuse, also refuse and reduce plastic waste on a daily basis, such as:
+1. Don’t use or refuse plastic bags, plastic bottles, straws.
+2. Reduce product that use plastic packaging
+3. Don’t litter
+4. Recycle or Reuse what you can </mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eh7-FZ-yN9" firstAttribute="leading" secondItem="kel-JO-Ym0" secondAttribute="leading" constant="40" id="B5e-AP-gsi"/>
+                                    <constraint firstItem="Hse-jy-G2I" firstAttribute="top" secondItem="kel-JO-Ym0" secondAttribute="top" id="Bay-Du-34j"/>
+                                    <constraint firstItem="eh7-FZ-yN9" firstAttribute="top" secondItem="Hse-jy-G2I" secondAttribute="bottom" id="SNj-km-Zbg"/>
+                                    <constraint firstItem="Hse-jy-G2I" firstAttribute="leading" secondItem="kel-JO-Ym0" secondAttribute="leading" constant="20" id="pQg-Gb-H6l"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tZG-sd-3eh">
+                                <rect key="frame" x="0.0" y="1047.5" width="414" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyw-ec-0rA">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Why there are 7 categories of plastic in Actic?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="whyThereAre7CategoriesClick:" destination="Oiw-u7-JwN" eventType="touchUpInside" id="R18-xc-h5I"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aN-92-woC">
+                                        <rect key="frame" x="40" y="33" width="334" height="122"/>
+                                        <string key="text">The categories we use is based on Plastic Pollution Calculator by Earth Day (earthday.org). Then actic simplify the categories into 8 most generated disposable plastic by Indonesian.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1aN-92-woC" firstAttribute="leading" secondItem="tZG-sd-3eh" secondAttribute="leading" constant="40" id="Ycj-mu-0oP"/>
+                                    <constraint firstItem="pyw-ec-0rA" firstAttribute="top" secondItem="tZG-sd-3eh" secondAttribute="top" id="bb4-Nu-Q3c"/>
+                                    <constraint firstItem="1aN-92-woC" firstAttribute="top" secondItem="pyw-ec-0rA" secondAttribute="bottom" id="dVe-Ng-Xw4"/>
+                                    <constraint firstItem="pyw-ec-0rA" firstAttribute="leading" secondItem="tZG-sd-3eh" secondAttribute="leading" constant="20" id="oxN-af-xdM"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rDe-n0-y9i">
+                                <rect key="frame" x="0.0" y="1202.5" width="414" height="439"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJc-BR-XQS">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="What is the ideal limit of my daily plastic waste?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="whatIsTheIdeaLimitClick:" destination="Oiw-u7-JwN" eventType="touchUpInside" id="kfN-pl-EWv"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2W-Ct-8sn">
+                                        <rect key="frame" x="40" y="33" width="334" height="406"/>
+                                        <mutableString key="text">In Asia, average plastic use is currently just one-fifth that level, at 20 kilograms (44 pounds) per person. That figure is expected to grow rapidly as the region’s economies expand.
+(source: https://www.theglobalist.com/plastic-consumption-the-good-the-bad-and-the-ugly/ )
+
+Based on that, we generated 50g of plastic waste daily and it is increasing. 50g is equal with 5 plastic bottles, so you can start at 5. While you start to track your disposable plastic daily, you can adjust your limit in the process. We hope you keep consistent with your limit and start to reduce the limit over the time.
+
+Earth needs you! </mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="W2W-Ct-8sn" firstAttribute="leading" secondItem="rDe-n0-y9i" secondAttribute="leading" constant="40" id="Pxt-YS-UE6"/>
+                                    <constraint firstItem="W2W-Ct-8sn" firstAttribute="top" secondItem="UJc-BR-XQS" secondAttribute="bottom" id="Q45-Gp-tJJ"/>
+                                    <constraint firstItem="UJc-BR-XQS" firstAttribute="leading" secondItem="rDe-n0-y9i" secondAttribute="leading" constant="20" id="QWN-WP-YNE"/>
+                                    <constraint firstItem="UJc-BR-XQS" firstAttribute="top" secondItem="rDe-n0-y9i" secondAttribute="top" id="RYJ-gu-8HS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tZG-sd-3eh" firstAttribute="top" secondItem="kel-JO-Ym0" secondAttribute="bottom" id="3JP-bw-yXZ"/>
+                            <constraint firstItem="EQ5-N3-oag" firstAttribute="leading" secondItem="4vc-aM-mnQ" secondAttribute="leading" id="65w-7C-bo6"/>
+                            <constraint firstAttribute="trailing" secondItem="rDe-n0-y9i" secondAttribute="trailing" id="7Lp-db-3c0"/>
+                            <constraint firstItem="2qZ-M8-Hht" firstAttribute="leading" secondItem="hkZ-UM-KiI" secondAttribute="leading" id="7iE-YD-TzB"/>
+                            <constraint firstItem="kel-JO-Ym0" firstAttribute="top" secondItem="EQ5-N3-oag" secondAttribute="bottom" id="8fK-uT-xUf"/>
+                            <constraint firstItem="kel-JO-Ym0" firstAttribute="leading" secondItem="4vc-aM-mnQ" secondAttribute="leading" id="9bc-Jq-l5i"/>
+                            <constraint firstItem="tZG-sd-3eh" firstAttribute="leading" secondItem="4vc-aM-mnQ" secondAttribute="leading" id="CD9-FR-lNI"/>
+                            <constraint firstAttribute="trailing" secondItem="kel-JO-Ym0" secondAttribute="trailing" id="Gk7-P7-4Ld"/>
+                            <constraint firstAttribute="trailing" secondItem="2qZ-M8-Hht" secondAttribute="trailing" id="Kcx-mv-bBe"/>
+                            <constraint firstAttribute="trailing" secondItem="tZG-sd-3eh" secondAttribute="trailing" id="ONw-Sh-yiA"/>
+                            <constraint firstItem="EQ5-N3-oag" firstAttribute="top" secondItem="2qZ-M8-Hht" secondAttribute="bottom" id="gve-XG-KZ2"/>
+                            <constraint firstItem="rDe-n0-y9i" firstAttribute="top" secondItem="tZG-sd-3eh" secondAttribute="bottom" id="kzb-Z7-3qv"/>
+                            <constraint firstItem="2qZ-M8-Hht" firstAttribute="top" secondItem="4vc-aM-mnQ" secondAttribute="top" constant="28" id="rZf-4B-chy"/>
+                            <constraint firstItem="rDe-n0-y9i" firstAttribute="leading" secondItem="4vc-aM-mnQ" secondAttribute="leading" id="raD-uW-0II"/>
+                            <constraint firstAttribute="trailing" secondItem="EQ5-N3-oag" secondAttribute="trailing" id="tob-5v-I8q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4vc-aM-mnQ"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1800"/>
+                    <connections>
+                        <outlet property="howBadIsTheSituationButton" destination="DG1-WC-Hl6" id="zPd-eE-jNz"/>
+                        <outlet property="howBadIsTheSituationLabel" destination="sbz-ZN-9sa" id="Z8s-VZ-1uc"/>
+                        <outlet property="whatCanIDoToHelpButton" destination="Hse-jy-G2I" id="vFO-Yf-ho1"/>
+                        <outlet property="whatCanIDoToHelpLabel" destination="eh7-FZ-yN9" id="Rll-Kd-2W6"/>
+                        <outlet property="whatIsActicButton" destination="2Y7-PY-cXI" id="n9Q-GL-0Rp"/>
+                        <outlet property="whatIsActicLabel" destination="kI9-K5-po3" id="fxi-jP-KqJ"/>
+                        <outlet property="whatIsTheIdeaLimitButton" destination="UJc-BR-XQS" id="buU-Ew-TbT"/>
+                        <outlet property="whatIsTheIdeaLimitLabel" destination="W2W-Ct-8sn" id="k4m-YU-Iva"/>
+                        <outlet property="whyThereAre7CategoriesButton" destination="pyw-ec-0rA" id="amW-0E-nA1"/>
+                        <outlet property="whyThereAre7CategoriesLabel" destination="1aN-92-woC" id="f4a-BT-UJt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2q-8X-NuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2922" y="1694"/>
+            <point key="canvasLocation" x="2936" y="1996"/>
         </scene>
         <!--About Us-->
         <scene sceneID="Q4u-FT-C6w">
@@ -368,12 +552,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSm-q7-1L2">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="p27-F7-VAn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -411,12 +593,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgp-rD-mhG">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="nnZ-UQ-P12"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -454,12 +634,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImI-Qf-Fnh">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="CVp-h5-1pG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -497,12 +675,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j27-sH-NnY">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="5jL-3j-nCo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -540,12 +716,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zK-sq-bMZ">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="Seq-LA-FMP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -583,12 +757,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O44-52-iuU">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="kpf-gH-dkc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -626,12 +798,10 @@
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vU-Ix-mKa">
                                                 <rect key="frame" x="184" y="15" width="40" height="24"/>
-                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="AuF-Oq-emQ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
