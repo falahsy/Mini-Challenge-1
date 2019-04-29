@@ -31,23 +31,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="183.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBF-lP-tgj">
-                                                    <rect key="frame" x="20" y="11" width="374" height="40"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="News Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBF-lP-tgj">
+                                                    <rect key="frame" x="20" y="11" width="374" height="89.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Published" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-eF-Kb4">
-                                                    <rect key="frame" x="20" y="49" width="374" height="14"/>
+                                                    <rect key="frame" x="20" y="104.5" width="374" height="14"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="14" id="1uh-pG-9UL"/>
+                                                        <constraint firstAttribute="height" constant="14" id="0eF-1a-IQ1"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.78039747476577759" green="0.78038269281387329" blue="0.78039270639419556" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOa-eN-jVA">
-                                                    <rect key="frame" x="20" y="71" width="374" height="75"/>
+                                                    <rect key="frame" x="20" y="126.5" width="374" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -57,11 +57,10 @@
                                                 <constraint firstItem="bOa-eN-jVA" firstAttribute="trailing" secondItem="hzS-1B-5OQ" secondAttribute="trailingMargin" id="4Ub-RP-7q6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="UBF-lP-tgj" secondAttribute="trailing" id="BtP-fP-Ebb"/>
                                                 <constraint firstItem="bOa-eN-jVA" firstAttribute="top" secondItem="OAs-eF-Kb4" secondAttribute="bottom" constant="8" id="J2c-ke-2aT"/>
-                                                <constraint firstItem="OAs-eF-Kb4" firstAttribute="top" secondItem="hzS-1B-5OQ" secondAttribute="top" constant="49" id="KsN-Pj-3NT"/>
+                                                <constraint firstItem="OAs-eF-Kb4" firstAttribute="top" secondItem="UBF-lP-tgj" secondAttribute="bottom" constant="4" id="KsN-Pj-3NT"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bOa-eN-jVA" secondAttribute="bottom" constant="27" id="RAY-zn-tff"/>
                                                 <constraint firstItem="OAs-eF-Kb4" firstAttribute="leading" secondItem="bOa-eN-jVA" secondAttribute="leading" id="TaX-zh-eM9"/>
                                                 <constraint firstItem="UBF-lP-tgj" firstAttribute="top" secondItem="hzS-1B-5OQ" secondAttribute="topMargin" id="cwj-Gz-ram"/>
-                                                <constraint firstItem="OAs-eF-Kb4" firstAttribute="top" secondItem="UBF-lP-tgj" secondAttribute="bottom" constant="-2" id="mBo-1i-rAl"/>
                                                 <constraint firstItem="UBF-lP-tgj" firstAttribute="leading" secondItem="hzS-1B-5OQ" secondAttribute="leadingMargin" id="qCK-mi-3q3"/>
                                                 <constraint firstItem="bOa-eN-jVA" firstAttribute="leading" secondItem="hzS-1B-5OQ" secondAttribute="leadingMargin" id="qW2-WN-OIA"/>
                                                 <constraint firstItem="OAs-eF-Kb4" firstAttribute="trailing" secondItem="bOa-eN-jVA" secondAttribute="trailing" id="w0d-sY-v4r"/>
@@ -1173,7 +1172,7 @@ Earth needs you! </string>
                                         <rect key="frame" x="0.0" y="33" width="414" height="143"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvx-Nq-imQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="260" height="143"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="143"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="fnY-wl-9VP"/>
                                                     <constraint firstAttribute="height" constant="143" id="uho-VJ-vfd"/>
@@ -1184,7 +1183,11 @@ Earth needs you! </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x100 x100 x100 x100 x100 x100 x100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF7-Sa-oWb">
-                                                <rect key="frame" x="339" y="0.5" width="75" height="142.5"/>
+                                                <rect key="frame" x="260" y="0.0" width="154" height="143"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="154" id="wDq-dY-UxX"/>
+                                                    <constraint firstAttribute="height" constant="143" id="zqe-CW-iIG"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1216,7 +1219,7 @@ Earth needs you! </string>
                                         <rect key="frame" x="0.0" y="33" width="414" height="143"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2b-u0-MM2">
-                                                <rect key="frame" x="0.0" y="0.0" width="260" height="143"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="201" height="143"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="143" id="QRD-6M-ufb"/>
                                                     <constraint firstAttribute="width" constant="260" id="sXZ-wD-fHD"/>
@@ -1227,7 +1230,11 @@ Earth needs you! </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x100 x100 x100 x100 x100 x100 x100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-YO-9ej">
-                                                <rect key="frame" x="319" y="0.5" width="95" height="142.5"/>
+                                                <rect key="frame" x="260" y="0.0" width="154" height="143"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="154" id="CVw-yv-CZJ"/>
+                                                    <constraint firstAttribute="height" constant="143" id="M2i-sj-y3C"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1265,10 +1272,10 @@ Earth needs you! </string>
                     <connections>
                         <outlet property="currentMonthButton" destination="8Fu-ef-MHz" id="dMm-8j-O5J"/>
                         <outlet property="currentMonthStackDetail" destination="Xyx-QN-ZmF" id="4yZ-AF-9n8"/>
-                        <outlet property="currentMonthUsage" destination="ZF7-Sa-oWb" id="dAq-Qx-FLV"/>
+                        <outlet property="currentMonthUsageLabel" destination="ZF7-Sa-oWb" id="G8z-28-82T"/>
                         <outlet property="lastMonthButton" destination="Sv3-tT-2f5" id="a46-9c-1BK"/>
                         <outlet property="lastMonthStackDetail" destination="nkC-NY-PiD" id="iIg-Eb-eOP"/>
-                        <outlet property="lastMonthUsage" destination="lo7-YO-9ej" id="44z-Vg-ghr"/>
+                        <outlet property="lastMonthUsageLabel" destination="lo7-YO-9ej" id="r3B-4U-NmW"/>
                         <outlet property="legendBagRect" destination="JDh-da-Za7" id="fOc-Ha-Vcn"/>
                         <outlet property="legendBottleRect" destination="BAd-qf-yWC" id="TFB-LB-NJu"/>
                         <outlet property="legendCigaretteButtRect" destination="0rX-ab-wkj" id="MfB-zF-xCZ"/>

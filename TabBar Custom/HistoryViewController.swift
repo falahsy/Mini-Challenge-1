@@ -27,8 +27,8 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var legendFoodPackagingRect: UILabel!
     @IBOutlet weak var pieChart: FRPieChartUIView!
     
-    @IBOutlet weak var currentMonthUsage: UILabel!
-    @IBOutlet weak var lastMonthUsage: UILabel!
+    @IBOutlet weak var currentMonthUsageLabel: UILabel!
+    @IBOutlet weak var lastMonthUsageLabel: UILabel!
     
     let database = try! Realm()
     var user = Person()
@@ -72,6 +72,13 @@ class HistoryViewController: UIViewController {
                             Float(user.foodPackaging) ]
         pieChart.categoriesData = data
         pieChart.setNeedsDisplay()
+        
+        //botol, cup, bag, food, spoon, straw, cigarette
+        let tempUsageCurrentMonth = "\(user.bottleUsage)\n\(user.cupUsage)\n\(user.bagUsage)\n\(user.foodPackaging)\n\(user.spoonUsage)\n\(user.strawUsage)\n\(user.cigaretteUsage)"
+        currentMonthUsageLabel.text = tempUsageCurrentMonth
+        
+        let tempUsageLastMonth = "10\n10\n10\n10\n10\n10\n10"
+        lastMonthUsageLabel.text = tempUsageLastMonth
     }
     
     @IBAction func currentMonthButtonClick(_ sender: Any) {

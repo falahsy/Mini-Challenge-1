@@ -11,7 +11,7 @@ import UserNotifications
 import RealmSwift
 import SCLAlertView
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var greetingNameLabel: UILabel!
     @IBOutlet weak var usageLabel: UILabel!
@@ -37,28 +37,20 @@ class HomeViewController: UIViewController {
     let formatter = DateFormatter()
     var dateComponents = DateComponents()
     
-    // HArcode untuk test Notification
-    let limit = 5
-    let usage = 7
-    let usageLimit = 11
-    let noPlastic = true
+    var triggerWarningLimit: Int = 0
     
     var user = Person()
     let database = try! Realm()
+    
+    var limitUsageTextField = UITextField()
+    
+    var date = Date().description.prefix(10)
     
     @IBOutlet weak var headerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Int(usageLabel.text!)! > limit {
-            notifikasiAlmostLimit()
-        } else if noPlastic == false{
-            notifikasiNoPlastic()
-        } else if usageLimit < limit{
-            notifikasiOverLimit()
-        }
-    
         createGradientLayer()
         
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
@@ -70,27 +62,62 @@ class HomeViewController: UIViewController {
         if database.objects(Person.self).count == 0 {
             let alert = SCLAlertView()
             let nickNameTextField = alert.addTextField("Enter nickname")
-            let limitUsageTextField = alert.addTextField("Enter limit Usage")
+            limitUsageTextField = alert.addTextField("Enter limit Usage")
+            
+            limitUsageTextField.delegate = self
+            
             alert.addButton("Set") {
-                if nickNameTextField.text != nil &&  limitUsageTextField.text != nil {
+                if nickNameTextField.text != nil &&  self.limitUsageTextField.text != nil && self.limitUsageTextField.text != "" && nickNameTextField.text != "" {
                     try! self.database.write {
                         self.database.add(self.user)
                         self.user.nickName = nickNameTextField.text!
-                        self.user.limitUsageGoal = Int(limitUsageTextField.text!)!
+                        self.user.limitUsageGoal = Int(self.limitUsageTextField.text!)!
                         self.greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
                         self.limitLabel.text = String(self.user.limitUsageGoal)
+                        
+                        self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
                     }
                 } else {
                     try! self.database.write {
                         self.database.add(self.user)
                         self.greetingNameLabel.text = "Hello,\n\(self.user.nickName)"
                         self.limitLabel.text = String(self.user.limitUsageGoal)
+                        
+                        self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
                     }
                 }
             }
             alert.showEdit("Alert", subTitle: "Set Your Nickname and Limit Plastic Usage per Day")
         } else {
             user = database.objects(Person.self)[0]
+            self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == limitUsageTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"+0123456789 ")//Here change this characters based on your requirement
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
+    
+    func checkOverLimit(){
+        if self.user.totalUsage > triggerWarningLimit{
+            notifikasiOverLimit()
+        }
+    }
+    
+    func checkNoPlastic(){
+        if self.user.totalUsage == 0 {
+            notifikasiNoPlastic()
+        }
+    }
+    
+    func checkAlmostReachLimit(){
+        if self.user.totalUsage == triggerWarningLimit {
+            notifikasiAlmostLimit()
         }
     }
     
@@ -105,6 +132,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         viewLoadData()
+        
     }
     
     func calculateUsage()-> Int {
@@ -118,6 +146,7 @@ class HomeViewController: UIViewController {
         }
         plasticBottleValue.text = String(user.bottleUsage)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     @IBAction func plasticCupStepper(_ sender: UIStepper) {
@@ -127,6 +156,7 @@ class HomeViewController: UIViewController {
         }
         plasticCupValue.text = String(user.cupUsage)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     @IBAction func plasticBagStepper(_ sender: UIStepper) {
@@ -134,9 +164,9 @@ class HomeViewController: UIViewController {
             user.bagUsage = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         plasticBagValue.text = String(user.bagUsage)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     @IBAction func foodPackagingStepper(_ sender: UIStepper) {
@@ -144,9 +174,9 @@ class HomeViewController: UIViewController {
             user.foodPackaging = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         foodPackagingValue.text = String(user.foodPackaging)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     @IBAction func plasticSpoonStepper(_ sender: UIStepper) {
@@ -156,6 +186,7 @@ class HomeViewController: UIViewController {
         }
         plasticSpoonValue.text = String(user.spoonUsage)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     @IBAction func strawStepper(_ sender: UIStepper) {
@@ -165,6 +196,7 @@ class HomeViewController: UIViewController {
         }
         strawValue.text = String(user.strawUsage)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     @IBAction func cigaretteButtStepper(_ sender: UIStepper) {
@@ -172,9 +204,9 @@ class HomeViewController: UIViewController {
             user.cigaretteUsage = Int(sender.value)
             user.totalUsage = calculateUsage()
         }
-        
         cigaretteButtValue.text = String(user.cigaretteUsage)
         usageLabel.text = String(user.totalUsage)
+        checkAlmostReachLimit()
     }
     
     // Load Data from other VC of after app was destroyed
@@ -198,15 +230,17 @@ class HomeViewController: UIViewController {
         plasticSpoonValue.text = String(user.spoonUsage)
         strawValue.text = String(user.strawUsage)
         cigaretteButtValue.text = String(user.cigaretteUsage)
+        
+        self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
     }
     
 
     // -- Notification Function Start --
     func notifikasiAlmostLimit(){
-        content.title = "Warning"
-        content.body = "Your plastic usage today almost reach the limit"
+        content.title = "Good Morning, \(user.nickName)"
+        content.body = "Bravo \(user.nickName), you’ve successfully limit your plastic waste yesterday. Keep going, you’re almost there! 🙂"
         content.sound = UNNotificationSound.default
-        let date = Date(timeIntervalSinceNow: 3)
+        let date = Date(timeIntervalSinceNow: 10)
         //        dateComponents.hour = 16
         //        dateComponents.minute = 36
         //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
@@ -217,26 +251,30 @@ class HomeViewController: UIViewController {
     }
     
     func notifikasiNoPlastic(){
-        content.title = "You're the best!😎"
-        content.body = "Cie congrats!"
+        content.title = "Wonderful day, \(user.nickName)!"
+        content.body = "Wow, you achieved zero plastic waste yesterday. Cheers \(user.nickName), you’re the best. ☺️"
         content.sound = UNNotificationSound.default
-        
-        dateComponents.hour = 16
-        dateComponents.minute = 35
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+        let date = Date(timeIntervalSinceNow: 10)
+        //        dateComponents.hour = 16
+        //        dateComponents.minute = 36
+        //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
+        let trigger1 = UNCalendarNotificationTrigger(dateMatching: trigger, repeats: true)
+        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger1)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     func notifikasiOverLimit(){
-        content.title = "You can do better than this☹️"
-        content.body = "cupu u"
+        content.title = "How’s everything going, \(user.nickName)?"
+        content.body = "You’ve exceeded your plastic waste limit yesterday 🙁. Today, Don’t forget to limit your plastic waste & have a nice day!"
         content.sound = UNNotificationSound.default
-        
-        dateComponents.hour = 16
-        dateComponents.minute = 37
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+        let date = Date(timeIntervalSinceNow: 10)
+        //        dateComponents.hour = 16
+        //        dateComponents.minute = 36
+        //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
+        let trigger1 = UNCalendarNotificationTrigger(dateMatching: trigger, repeats: true)
+        let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger1)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }
