@@ -46,6 +46,8 @@ class HomeViewController: UIViewController {
     var user = Person()
     let database = try! Realm()
     
+    @IBOutlet weak var headerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,6 +89,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
         viewLoadData()
     }
     
