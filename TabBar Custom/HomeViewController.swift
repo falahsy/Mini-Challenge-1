@@ -60,6 +60,8 @@ class HomeViewController: UIViewController {
 //            notifikasiOverLimit()
 //        }
         
+        createGradientLayer()
+        
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
 //        try! database.write {
@@ -85,6 +87,13 @@ class HomeViewController: UIViewController {
         } else {
             user = database.objects(Person.self)[0]
         }
+    }
+    
+    func createGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = headerView.bounds
+        gradientLayer.colors = [UIColor(named: "ColorBackground1")?.cgColor, UIColor(named: "ColorBackground2")?.cgColor]
+        headerView.layer.addSublayer(gradientLayer)
     }
     
     override func viewWillAppear(_ animated: Bool) {

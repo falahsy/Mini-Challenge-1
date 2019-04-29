@@ -730,11 +730,11 @@
             </objects>
             <point key="canvasLocation" x="-490" y="-481"/>
         </scene>
-        <!--Tracker-->
+        <!--Actic-->
         <scene sceneID="ZAg-Yj-IdR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vgg-er-Zj1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tracker" image="home-page-90" id="LY8-Ny-1nb"/>
+                    <tabBarItem key="tabBarItem" title="Actic" image="Shape" id="LY8-Ny-1nb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AGP-8F-zlV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -860,8 +860,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Shape" width="14" height="27"/>
         <image name="history-90" width="30" height="30"/>
-        <image name="home-page-90" width="30" height="30"/>
         <image name="news-90" width="30" height="30"/>
         <image name="settings-90" width="30" height="30"/>
         <namedColor name="ColorBackground1">
