@@ -44,9 +44,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     var limitUsageTextField = UITextField()
     
-    var date = Date().description.prefix(10)
-    
     @IBOutlet weak var headerView: UIView!
+    
+    var currentDay = String()
+    var lastOpenedDay = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,24 +104,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func checkOverLimit(){
-        if self.user.totalUsage > triggerWarningLimit{
-            notifikasiOverLimit()
-        }
-    }
-    
-    func checkNoPlastic(){
-        if self.user.totalUsage == 0 {
-            notifikasiNoPlastic()
-        }
-    }
-    
-    func checkAlmostReachLimit(){
-        if self.user.totalUsage == triggerWarningLimit {
-            notifikasiAlmostLimit()
-        }
-    }
-    
     func createGradientLayer() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = headerView.bounds
@@ -131,8 +114,40 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
-        viewLoadData()
         
+        self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
+        
+        formatter.dateStyle = .medium
+        formatter.dateFormat = "EEEE"
+        currentDay = formatter.string(from: Date())
+//        currentDay = "Tuesday"
+        
+        if lastOpenedDay != currentDay{
+            lastOpenedDay = currentDay
+            
+            if user.totalUsage == triggerWarningLimit {
+                notifikasiAlmostLimit()
+            } else if user.totalUsage == 0 {
+                notifikasiNoPlastic()
+            } else if user.totalUsage > user.limitUsageGoal {
+                notifikasiOverLimit()
+            }
+            resetData()
+        }
+        viewLoadData()
+    }
+    
+    func resetData(){
+        try! database.write {
+            user.bottleUsage = 0
+            user.bagUsage = 0
+            user.cigaretteUsage = 0
+            user.cupUsage = 0
+            user.foodPackaging = 0
+            user.spoonUsage = 0
+            user.strawUsage = 0
+            user.totalUsage = 0
+        }
     }
     
     func calculateUsage()-> Int {
@@ -146,7 +161,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         plasticBottleValue.text = String(user.bottleUsage)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     @IBAction func plasticCupStepper(_ sender: UIStepper) {
@@ -156,7 +170,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         plasticCupValue.text = String(user.cupUsage)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     @IBAction func plasticBagStepper(_ sender: UIStepper) {
@@ -166,7 +179,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         plasticBagValue.text = String(user.bagUsage)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     @IBAction func foodPackagingStepper(_ sender: UIStepper) {
@@ -176,7 +188,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         foodPackagingValue.text = String(user.foodPackaging)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     @IBAction func plasticSpoonStepper(_ sender: UIStepper) {
@@ -186,7 +197,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         plasticSpoonValue.text = String(user.spoonUsage)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     @IBAction func strawStepper(_ sender: UIStepper) {
@@ -196,7 +206,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         strawValue.text = String(user.strawUsage)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     @IBAction func cigaretteButtStepper(_ sender: UIStepper) {
@@ -206,7 +215,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         }
         cigaretteButtValue.text = String(user.cigaretteUsage)
         usageLabel.text = String(user.totalUsage)
-        checkAlmostReachLimit()
     }
     
     // Load Data from other VC of after app was destroyed
@@ -230,8 +238,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         plasticSpoonValue.text = String(user.spoonUsage)
         strawValue.text = String(user.strawUsage)
         cigaretteButtValue.text = String(user.cigaretteUsage)
-        
-        self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
     }
     
 
@@ -240,7 +246,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         content.title = "Good Morning, \(user.nickName)"
         content.body = "Bravo \(user.nickName), you’ve successfully limit your plastic waste yesterday. Keep going, you’re almost there! 🙂"
         content.sound = UNNotificationSound.default
-        let date = Date(timeIntervalSinceNow: 10)
+        let date = Date(timeIntervalSinceNow: 4)
         //        dateComponents.hour = 16
         //        dateComponents.minute = 36
         //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
@@ -254,7 +260,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         content.title = "Wonderful day, \(user.nickName)!"
         content.body = "Wow, you achieved zero plastic waste yesterday. Cheers \(user.nickName), you’re the best. ☺️"
         content.sound = UNNotificationSound.default
-        let date = Date(timeIntervalSinceNow: 10)
+        let date = Date(timeIntervalSinceNow: 4)
         //        dateComponents.hour = 16
         //        dateComponents.minute = 36
         //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
@@ -268,7 +274,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         content.title = "How’s everything going, \(user.nickName)?"
         content.body = "You’ve exceeded your plastic waste limit yesterday 🙁. Today, Don’t forget to limit your plastic waste & have a nice day!"
         content.sound = UNNotificationSound.default
-        let date = Date(timeIntervalSinceNow: 10)
+        let date = Date(timeIntervalSinceNow: 4)
         //        dateComponents.hour = 16
         //        dateComponents.minute = 36
         //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
