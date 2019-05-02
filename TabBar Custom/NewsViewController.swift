@@ -23,7 +23,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var url = "https://newsapi.org/v2/everything?q=%22plastic%20waste%22&from="
     
-    let fromDateNews = Date().description.prefix(10)
+    var fromDateNews = Date().description.prefix(10)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,5 +105,13 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
             dateResult = "There was an error decoding the string"
         }
         return dateResult
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fromDateNews = Date().description.prefix(10)
+        
+        url = "\(url)\(fromDateNews)&sortBy=publishedAt&apiKey=a7b4ac71ee6640f4aecdabc90edc5304"
+        getNewsJSON()
     }
 }

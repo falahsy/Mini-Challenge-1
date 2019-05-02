@@ -66,9 +66,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
         
-//        try! database.write {
-//            database.deleteAll()
-//        }
+        try! database.write {
+            database.deleteAll()
+        }
         
         if database.objects(Person.self).count == 0 {
             let alert = SCLAlertView()
@@ -99,7 +99,15 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             alert.showEdit("Alert", subTitle: "Set Your Nickname and Limit Plastic Usage per Day")
+            
+            try! self.database.write {
+                self.database.add(self.user)
+            }
+            
         } else {
+            try! self.database.write {
+                self.database.add(self.user)
+            }
             user = database.objects(Person.self)[0]
             self.triggerWarningLimit = (self.user.limitUsageGoal*8)/10
         }
